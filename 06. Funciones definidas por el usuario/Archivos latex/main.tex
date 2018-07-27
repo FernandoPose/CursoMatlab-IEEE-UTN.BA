@@ -5,7 +5,7 @@
 \title[Programación en MatLAB]{Introducción a la programación con MatLAB}
 \subtitle{Módulo 06 - Funciones definidas por el usuario}
 
-\author{Autor1 - Autor2 - Autor3\inst{1}}
+\author{Agustín - Andrés - Gabriel - Fernando\inst{1}}
 \institute[UTN.BA]
 {
   \inst{1}%
@@ -13,7 +13,7 @@
   Facultad Regional Buenos Aires
   }
 
-\date{dia mes 2018}
+\date{2018}
 
 \subject{Taller de programación}
 
@@ -37,14 +37,29 @@
 \section{Funciones definidas por el usuario}
 
 \begin{frame}{Introducción}
+Hasta ahora:
 \begin{center}
-MATLAB permite definir funciones propias. Las funciones definidas por el usuario se almacenan como archivos .m y matlab puede acceder a ellas si están almacenadas en el directorio de trabajo actual.
+$cos(x)$
 \end{center}
-Hasta ahora, por ejemplo la función interna: $cos(x)$
 \begin{itemize}
-\item La función se llama cos
-\item Toma la entrada del usuario dentro de paréntesis (en este caso x)
-\item Calcula un resultado\\
+\item Nombre de la función: \textbf{cos}
+\item Argumento de entrada: \textbf{x}
+\item Retorna un resultado\\
+\end{itemize}
+\begin{center}
+\includegraphics[scale=0.5]{images/img43.png}
+\end{center}
+\end{frame}
+
+\begin{frame}{Introducción}
+Hasta ahora:
+\begin{center}
+$cos(x)$
+\end{center}
+\begin{itemize}
+\item Nombre de la función: \textbf{cos}
+\item Argumento de entrada: \textbf{x}
+\item Retorna un resultado\\
 \end{itemize}
 \begin{block}{Tener en cuenta}
 Las funciones definidas por el usuario funcionan del mismo modo.
@@ -53,8 +68,8 @@ Las funciones definidas por el usuario funcionan del mismo modo.
 
 \begin{frame}{Funciones definidas por el usuario}
 \begin{itemize}
-\item Las funciones definidas por el usuario se crean en archivos .m
-\item Cada una debe comenzar con una línea de definición de función que contenga
+\item Se crean en archivos .m
+\item Comienzan con una línea de definición de función que contiene:
 \begin{itemize}
 \item la palabra reservada \textbf{function}
 \item Una variable que defina la salida de función
@@ -66,43 +81,46 @@ Sintaxis:
 \begin{center}
 \textbf{function output = my\_function(variable)}
 \end{center}
-Donde:
-\begin{itemize}
-\item Argumento de entrada: variable
-\item Nombre de la función: my\_function
-\item Argumento de salida: output
-\end{itemize}
 \end{frame}
 
 \begin{frame}{Funciones definidas por el usuario}
-Se deben tener en cuenta las siguientes consideraciones:
+\textbf{Consideraciones:}
 \begin{itemize}
 \item El nombre del archivo .m debe ser el mismo que el nombre de la función.
 \item El nombre de la función debe comenzar con una letra.
 \item El nombre de la función puede formarse con letras, números y guión bajo.
 \item No se pueden usar nombres reservados.
-\item Permite cualquier longitud.
+\textbf{\item Permite cualquier longitud.}
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Ejercicio práctico xx}
+\begin{frame}{Ejercicio práctico 8}
 \begin{center}
 Realice una función que convierte minutos en segundos.
 \end{center}
+\begin{alertblock}{Importante}
+Matlab puede acceder a funciones definidas por el usuario únicamente si están almacenadas en el directorio de trabajo actual.
+\end{alertblock}
 \end{frame}
 
 \begin{frame}{Funciones con entradas y salidas múltiples}
-Las funciones definidas por el usuario pueden requerir múltiples entradas y múltiples salidas. La sintaxis es:\\
+Funciones de múltiples entradas y salidas. Sintaxis:\\
 \begin{center}
 \textbf{function [output\_1 output\_2] = my\_function(variable\_1, variable\_2)}
 \end{center}
 Siendo la forma de invocar a la función:
 \begin{center}
+\includegraphics[scale=0.15]{images/img40.png}
+\end{center}
+\end{frame}
+
+\begin{frame}{Funciones con entradas y salidas múltiples}
+\begin{center}
 \textbf{[output\_1 output\_2] = my\_function(variable\_1, variable\_2)}
 \end{center}
 \end{frame}
 
-\begin{frame}{Ejercicio práctico xx}
+\begin{frame}{Ejercicio práctico 9}
 \begin{enumerate}
 \item Escribir una función para multiplicar dos vectores punto a punto.
 \item Escribir una función que dado un valor de tiempo calcule la distancia, velocidad y aceleración de un automóvil teniendo en cuenta:
@@ -115,7 +133,7 @@ Siendo la forma de invocar a la función:
 \end{frame}
 
 \begin{frame}{Funciones sin entrada o salida}
-Las funciones definidas por el usuario pueden no requerir de entradas y salidas. La sintaxis es:\\
+Funciones sin entradas y salidas. Sintaxis:\\
 \begin{center}
 \textbf{function [] = my\_function()}
 \end{center}
@@ -127,15 +145,15 @@ Siendo la forma de invocar a la función:
 
 \begin{frame}{Variables locales y globales}
 \begin{itemize}
-\item \textbf{Variables locales:} Son las variables definidas dentro de una función. Estas existen sólo para el uso de la función, no se almacenan en el área de trabajo (workspace). Las funciones deben estar completamente autocontenidas.
-\item \textbf{Variables globales:} Están disponibles para todas las partes de un programa de cómputo. Se definen mediante el comando \textbf{global} variable.
+\item \textbf{Variables locales:} Son las variables definidas dentro de una función. Sólo existen para el uso de la función.
+\item \textbf{Variables globales:} 
 \end{itemize}
-\begin{block}{Tener en cuenta}
-Funciones autocontenido: Sólo pueden obtener información de su programa a través de los argumentos de entrada y la única forma en que pueden entregar información es a través de la salida de la función.
-\end{block}
-\begin{alertblock}{Importante}
-No es una buena práctica de programación utilizar variables globales.
-\end{alertblock}
+\end{frame}
+
+\begin{frame}{Variables locales y globales}
+\begin{center}
+\includegraphics[scale=0.4]{images/img41.png}
+\end{center}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

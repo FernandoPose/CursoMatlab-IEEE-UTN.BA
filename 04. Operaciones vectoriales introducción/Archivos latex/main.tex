@@ -3,9 +3,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \title[Programación en MatLAB]{Introducción a la programación con MatLAB}
-\subtitle{Módulo 04 - Operaciones vectoriales (introducción)}
+\subtitle{Módulo 04 - Operaciones vectoriales \textbf{(introducción)}}
 
-\author{Autor1 - Autor2 - Autor3\inst{1}}
+\author{Agustín - Andrés - Gabriel - Fernando\inst{1}}
 \institute[UTN.BA]
 {
   \inst{1}%
@@ -13,7 +13,7 @@
   Facultad Regional Buenos Aires
   }
 
-\date{dia agosto 2018}
+\date{2018}
 
 \subject{Taller de programación}
 
@@ -37,11 +37,12 @@
 \section{Operaciones vectoriales}
 
 \begin{frame}{Tipos de operaciones}
-Existen dos tipos de operaciones aritméticas: las operaciones aritméticas matriciales, que se rigen por las reglas del álgebra lineal, y las operaciones aritméticas con vectores, que se realizan elemento a elemento.\\
-\begin{enumerate}
-\item Las operaciones matemáticas simples entre escalares y vectores aplican el escalar a todos los elementos del vector según la operación definida.
-\item Las operaciones simples entre vectores se realizan elemento a elemento.
-\end{enumerate}
+\begin{center}
+\includegraphics[scale=0.3]{images/img40.png}
+\end{center}
+\begin{center}
+\textbf{TEMA CORTO *** TEMA CORTO *** TEMA CORTO}
+\end{center}
 \end{frame}
 
 \begin{frame}{Tipos de operaciones}
@@ -53,17 +54,50 @@ Existen dos tipos de operaciones aritméticas: las operaciones aritméticas matr
 a+c={[}a1+c a2+c...,an+c{]}                                                                            & Suma de un escalar y un vector          \\ \hline
 a*c={[}a1*c a2*c ... an*c{]}                                                                           & Producto de un escalar por un vector    \\ \hline
 a + b = {[} a1+b1 a2+b2 ... an+bn{]}                                                                   & Suma de dos vectores                    \\ \hline
+\end{tabular}
+\end{table}
+\end{frame}
+
+\begin{frame}{Tipos de operaciones}
+\begin{table}[]
+\centering
+\begin{tabular}{|c|c|}
+\hline
+\multicolumn{2}{|c|}{a=\{a1,a2,...,an\}, b=\{b1,b2,...,bn\} c=escalar}                                                                           \\ \hline
 a. * b = {[} a1*b1 a2*b2 ... an*bn{]}                                                                  & Producto de dos vectores                \\ \hline
 a. / b = {[} a1/b1 a2/b2 ... an/bn{]}                                                                  & Cociente a la derecha de dos vectores   \\ \hline
-a. \textbackslash b = {[} a1\textbackslash{}b1 a2\textbackslash{}b2 ... an\textbackslash{}bn{]}        & Cociente a la izquierda de dos vectores \\ \hline
+a.\textasciicircum{}c = {[}a1\textasciicircum{}c a2\textasciicircum{}c ... an\textasciicircum{}c{]}    & Vector elevado a escalar                \\ \hline
+c.\textasciicircum{}a = {[}c\textasciicircum{}a1 c\textasciicircum{}a2 ... c\textasciicircum{}an{]}    & Escalar elevado a vector                \\ \hline
+a.\textasciicircum{}b = {[}a1\textasciicircum{}b1 a2\textasciicircum{}b2 ... an\textasciicircum{}bn{]} & Vector elevado a vector                 \\ \hline
+\end{tabular}
+\end{table}
+\end{frame}
+
+\begin{frame}{Tipos de operaciones}
+\begin{table}[]
+\centering
+\begin{tabular}{|c|c|}
+\hline
+\multicolumn{2}{|c|}{a=\{a1,a2,...,an\}, b=\{b1,b2,...,bn\} c=escalar}                                                                           \\ \hline
+a. * b = {[} a1*b1 a2*b2 ... an*bn{]}                                                                  & Producto de dos vectores                \\ \hline
+a. / b = {[} a1/b1 a2/b2 ... an/bn{]}                                                                  & Cociente a la derecha de dos vectores   \\ \hline
 a.\textasciicircum{}c = {[}a1\textasciicircum{}c a2\textasciicircum{}c ... an\textasciicircum{}c{]}    & Vector elevado a escalar                \\ \hline
 c.\textasciicircum{}a = {[}c\textasciicircum{}a1 c\textasciicircum{}a2 ... c\textasciicircum{}an{]}    & Escalar elevado a vector                \\ \hline
 a.\textasciicircum{}b = {[}a1\textasciicircum{}b1 a2\textasciicircum{}b2 ... an\textasciicircum{}bn{]} & Vector elevado a vector                 \\ \hline
 \end{tabular}
 \end{table}
 \begin{alertblock}{Tener en cuenta}
-Hay que tener presente que los vectores han de ser de la misma longitud y que en el producto, cociente y potencia el primer operando va seguido de un punto.
+Los vectores deben ser de igual longitud.
 \end{alertblock}
+\end{frame}
+
+\begin{frame}{Tipos de operaciones}
+\begin{center}
+\textbf{Ejemplo de aplicación de a./c}
+\end{center}
+\begin{center}
+\includegraphics[scale=0.6]{images/img41.png}
+\end{center}
 \end{frame}
 
 \begin{frame}{Ejercicio práctico 5}

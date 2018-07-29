@@ -5,7 +5,7 @@
 \title[Programación en MatLAB]{Introducción a la programación con MatLAB}
 \subtitle{Módulo 09 - Funciones lógicas y estructuras de control}
 
-\author{Autor1 - Autor2 - Autor3\inst{1}}
+\author{Agustín - Andrés - Gabriel - Fernando\inst{1}}
 \institute[UTN.BA]
 {
   \inst{1}%
@@ -13,7 +13,7 @@
   Facultad Regional Buenos Aires
   }
 
-\date{dia mes 2018}
+\date{2018}
 
 \subject{Taller de programación}
 
@@ -36,15 +36,12 @@
 \section{Funciones lógicas y estructuras de control}
 
 \begin{frame}{Introducción}
-Las secciones de código de los programas se pueden categorizar en una de tres estructuras:\\
+Tipos de estructuras de código:
 \begin{itemize}
-\item Secuencias: Lista de comandos que se ejecutan una a continuación de la otra.
-\item Estructura de selección: Permite ejecutarse un comando si algún criterio es verdadero y otro si el criterio es falso.
-\item Estructura de repetición: Hace que un grupo de comandos se ejecute varias veces.
+\item \textbf{Secuencias:} Comandos ejecutados uno a continuación del otro.
+\item \textbf{Estructura de selección:} Ejecuta un comando según un criterio.
+\item \textbf{Estructura de repetición:} Ejecuta un conjunto de comandos "n" veces.
 \end{itemize}
-\begin{block}{Tener en cuenta}
-Las estructuras de selección y repetición dependen de operadores relacionales y lógicos.
-\end{block}
 \end{frame}
 
 \begin{frame}{Introducción}
@@ -53,8 +50,17 @@ Las estructuras de selección y repetición dependen de operadores relacionales 
 \end{center}
 \end{frame}
 
+\begin{frame}{Introducción}
+\begin{center}
+\includegraphics[scale=0.7]{images/pantalla3.png}
+\end{center}
+\begin{block}{Tener en cuenta}
+Estructuras de selección y repetición dependen de operadores relacionales y lógico.
+\end{block}
+\end{frame}
+
 \begin{frame}{Operadores relacionales}
-Matlab tiene seis operadores relacionales para comparar dos matrices de igual tamaño. Los mismos son:\\
+\textbf{Operadores relacionales:}
 \begin{table}[]
 \centering
 \begin{tabular}{|c|c|}
@@ -68,7 +74,6 @@ Operador relacional & Interpretación      \\ \hline
 $\sim$=             & no igual a          \\ \hline
 \end{tabular}
 \end{table}
-Las comparaciones pueden ser verdaderas ó falsas. Matlab toma un valor positivo como verdadero(true) o cero como falso(false).
 \end{frame}
 
 \begin{frame}{Operadores relacionales}
@@ -76,30 +81,49 @@ Ej. Ejecutar las siguientes líneas. Obtener conclusiones.
 \boiteviolette{
 x = 5;\\
 y = 1;\\
-x<y;
-}
-Ej. Ejecutar las siguientes líneas. Obtener conclusiones.
-\boiteviolette{
-x = 1:5;\\
-y = x-4;\\
-x<y;
+x<y
 }
 \end{frame}
 
 \begin{frame}{Operadores relacionales}
 Ej. Ejecutar las siguientes líneas. Obtener conclusiones.
 \boiteviolette{
-x = [1 2 3 4 5];\\
-y = [-2 0 2 4 6];\\
-x<y;
+x = 5;\\
+y = 1;\\
+x<y
+}
+Las comparaciones pueden ser verdaderas ó falsas. 
+\begin{itemize}
+\item Valor positivo: Verdadero (true)
+\item Valor cero: Falso (false)
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Operadores relacionales}
+Ej. Ejecutar las siguientes líneas. Obtener conclusiones.
+\boiteviolette{
+x = 1:5;\\
+y = x-4;\\
+x<y
+}
+\end{frame}
+
+\begin{frame}{Operadores relacionales}
+Ej. Ejecutar las siguientes líneas. Obtener conclusiones.
+\boiteviolette{
+x = 1:5;\\
+y = x-4;\\
+x<y
 }
 \begin{alertblock}{Tener en cuenta}
 Para que una comparación sea verdadera, debe ser \textbf{verdadera} para cada elemento de la matriz.
 \end{alertblock}
 \end{frame}
 
+
+
 \begin{frame}{Operadores lógicos}
-Matlab permite combinar comparaciones mediante los operadores lógicos. Los mismos son:
+\textbf{Operadores lógicos:}
 \begin{table}[]
 \centering
 \begin{tabular}{|c|c|}
@@ -113,6 +137,22 @@ $\sim$          & not            \\ \hline
 \end{frame}
 
 \begin{frame}{Operadores lógicos}
+\textbf{Cómo leemos:}
+\begin{columns}
+\begin{column}{0.5\textwidth}
+\begin{center}
+\Huge (z>x)\&(z>y)
+\end{center}
+\end{column}
+\begin{column}{0.5\textwidth}
+\begin{center}
+\includegraphics[scale=0.4]{images/img41.png}
+\end{center}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Operadores lógicos}
 Ej. Ejecutar las siguientes líneas. Obtener conclusiones.
 \boiteviolette{
 x = [1 2 3 4 5];\\
@@ -120,7 +160,6 @@ y = [-2 0 2 4 6];\\
 z = [8 8 8 8 8];\\
 (z>x)\&(z>y);
 }
-Cómo leemos \textbf{(z>x)\&(z>y)} ?
 \end{frame}
 
 \begin{frame}{Estructura de selección - if}
@@ -131,14 +170,14 @@ Cómo leemos \textbf{(z>x)\&(z>y)} ?
 \end{center}
 \end{column}
 \begin{column}{0.3\textwidth}
-if \textit{enunciado de comparación}\\
+\textbf{if} \textit{enunciado de comparación}\\
 	....\\
     instrucciones\\
-end
+\textbf{end}
 \end{column}
 \end{columns}
 \begin{center}
-En este caso se ejecutan los comandos si y sólo si la condición es verdadera
+Se ejecutan los comandos si y sólo si la condición es verdadera
 \end{center}
 \end{frame}
 
@@ -150,17 +189,17 @@ En este caso se ejecutan los comandos si y sólo si la condición es verdadera
 \end{center}
 \end{column}
 \begin{column}{0.3\textwidth}
-if \textit{enunciado de comparación}\\
+\textbf{if} \textit{enunciado de comparación}\\
 	....\\
     instrucciones 1\\
-else\\
+\textbf{else}\\
  	....\\
     instrucciones 2\\
-end
+\textbf{end}
 \end{column}
 \end{columns}
 \begin{center}
-En este caso se ejecutan las instrucciones 1 si la condición es verdadera y las instrucciones 2 si la condición es falsa. 
+Se ejecutan las instrucciones 1 si la condición es verdadera y las instrucciones 2 si la condición es falsa. 
 \end{center}
 \end{frame}
 
@@ -172,25 +211,24 @@ En este caso se ejecutan las instrucciones 1 si la condición es verdadera y las
 \end{center}
 \end{column}
 \begin{column}{0.3\textwidth}
-if \textit{enunciado de comparación}\\
+\textbf{if} \textit{enunciado de comparación}\\
 	....\\
     instrucciones 1\\
-elseif \textit{enunciado de comparación}\\
+\textbf{elseif} \textit{enunciado de comparación}\\
  	....\\
     instrucciones 2\\
-elseif \textit{enunciado de comparación}\\
+\textbf{elseif} \textit{enunciado de comparación}\\
  	....\\
     instrucciones 3\\
-else\\
+\textbf{else}\\
  	....\\
     instrucciones 4\\
-end
+\textbf{end}
 \end{column}
 \end{columns}
-Se ejecutan las instrucciones 1 si condición 1 es cierta, se ejecutan las instrucciones 2 si condición 1 es falsa y condición 2 es cierta, continua sucesivamente. En caso de que todas sean falsas ejecuta las instrucciones 4.
 \end{frame}
 
-\begin{frame}{Ejercicio práctico xx}
+\begin{frame}{Ejercicio práctico 11}
 Escriba una función if para cada uno de los siguientes problemas si supone que la entrada a la función es un escalar.
 \begin{enumerate}
 \item Suponga que en un estado la edad legal para beber es 21. Escriba y pruebe una función para determinar si una persona es lo suficientemente madura para beber.
@@ -199,8 +237,7 @@ Escriba una función if para cada uno de los siguientes problemas si supone que 
 \end{frame}
 
 \begin{frame}{Estructura de selección - Switch/case}
-La instrucción switch ejecuta ciertas sentencias basadas en el valor de una
-variable o expresión. Su sintaxis es:
+Ejecuta ciertas sentencias basadas en el valor de una variable o expresión.
 \begin{columns}
 \begin{column}{0.5\textwidth}
 \begin{center}
@@ -208,19 +245,19 @@ variable o expresión. Su sintaxis es:
 \end{center}
 \end{column}
 \begin{column}{0.5\textwidth}
-switch \textit{expresión}\\
-   case opcion 1\\
-      instrucciones 1\\
-   case opcion 2\\
-      instrucciones 2\\
-   otherwise
+\textbf{switch} \textit{expresión}\\
+   \textbf{case} opcion1\\
+      instrucciones1\\
+   \textbf{case} opcion2\\
+      instrucciones2\\
+   \textbf{otherwise}
       instrucciones n\\
-end
+\textbf{end}
 \end{column}
 \end{columns}
 
 \begin{block}{Tener en cuenta}
-\textbf{Otherwise} no se requiere para que funcione la estructura switch/case.
+\textbf{Otherwise} puede ser omitido.
 \end{block}
 \end{frame}
 
@@ -228,7 +265,7 @@ end
 \begin{exampleblock}{Comando}
 Ver comando: \textbf{menu}
 \end{exampleblock}
-La función \textbf{menu} se usa en conjunto con una estructura switch/case.
+
 Ej. Ejecutar las siguientes líneas. Obtener conclusiones.
 \boiteviolette{
 opcion = menu('Mi primer menu','opcion 1','opcion 2');\\
@@ -241,7 +278,7 @@ end
 }
 \end{frame}
 
-\begin{frame}{Ejercicio práctico xx}
+\begin{frame}{Ejercicio práctico 12}
 \begin{enumerate}
 \item Cree un programa que pida al usuario su año en la escuela: primero, segundo, tercero o cuarto. La entrada sera una cadena. Use la estructura switch/case para determinar qué día serán los finales para cada grupo: lunes para primero, martes para segundo, miércoles para tercero y jueves para cuarto.
 \item Repita el problema 1 pero esta vez con un menú
@@ -262,25 +299,23 @@ más de 3 dulces = 1.65\$ + 0.3 * (número ordenado -3)
 \includegraphics[scale=0.7]{images/pantalla8.png}
 \end{center}
 \end{column}
-\begin{column}{0.3\textwidth}
-for \textit{indice = comienzo\textbf{:}incremento\textbf{:}final}\\
+\begin{column}{0.5\textwidth}
+\textbf{for} \textit{indice = comienzo\textbf{:}incremento\textbf{:}final}\\
    instrucciones\\
-end
+\textbf{end}
 \end{column}
 \end{columns}
 \begin{center}
-Las instrucciones dentro del bucle for se repiten N veces donde N es el valor final.
+Las instrucciones dentro del bucle for se repiten N veces.
 \end{center}
 \end{frame}
 
-\begin{frame}{Ejercicio práctico xx}
+\begin{frame}{Ejercicio práctico 13}
 Considere la siguiente matriz de valores: x = [45,23,17,34,85,33] determine cuántos elementos son mayores que 30 utilizando un contador. \textit{Ayuda: Utilice la función length().}
 \end{frame}
 
 \begin{frame}{Estructura de repetición - while}
-\begin{center}
-Permite ejecutar de forma repetitiva un grupo de instrucciones mientras se cumpla una condición lógica especificada. La sintaxis es:
-\end{center}
+Ejecutar un grupo de instrucciones mientras se cumpla una condición lógica
 \begin{columns}
 \begin{column}{0.5\textwidth}
 \begin{center}
@@ -288,23 +323,36 @@ Permite ejecutar de forma repetitiva un grupo de instrucciones mientras se cumpl
 \end{center}
 \end{column}
 \begin{column}{0.3\textwidth}
-while \textit{criterio}\\
+\textbf{while} \textit{criterio}\\
    instrucciones\\
-end
+\textbf{end}
 \end{column}
 \end{columns}
 \end{frame}
 
-\begin{frame}{Ejercicio práctico xx}
+\begin{frame}{Ejercicio práctico 14}
 Considere la siguiente matriz de valores: x = [45,23,17,34,85,33] determine cuántos elementos son mayores que 30 utilizando un contador. \textit{Ayuda: Utilice la función length().}
 \end{frame}
 
 \begin{frame}{Instrucción break y continue}
+\begin{columns}
+\begin{column}{0.5\textwidth}
 \begin{itemize}
-\item La instrucción \textbf{break} finaliza la ejecución de un bucle for o while (de forma prematura). A continuación se ejecuta la siguiente instrucción fuera de dicho bloque.
-\item La instrucción \textbf{continue} pasa el control a la iteración siguiente en un bucle for o while en el cual aparece ignorando las restantes instrucciones en el cuerpo del bucle.
+\item La instrucción \textbf{break} finaliza la ejecución del bucle for o while. A continuación se ejecuta la siguiente instrucción fuera del bloque.
+\item La instrucción \textbf{continue} pasa el control a la iteración siguiente en un bucle for o while.
 \end{itemize}
+\end{column}
+\begin{column}{0.5\textwidth}
+\begin{center}
+\includegraphics[scale=0.3]{images/img40.png}
+\end{center}
+\end{column}
+\end{columns}
 \end{frame}
+
+
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

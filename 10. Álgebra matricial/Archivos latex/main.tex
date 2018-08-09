@@ -5,7 +5,7 @@
 \title[Programación en MatLAB]{Introducción a la programación con MatLAB}
 \subtitle{Módulo 10 - Álgebra matricial}
 
-\author{Autor1 - Autor2 - Autor3\inst{1}}
+\author{Agustín - Andrés - Gabriel - Fernando\inst{1}}
 \institute[UTN.BA]
 {
   \inst{1}%
@@ -13,7 +13,7 @@
   Facultad Regional Buenos Aires
   }
 
-\date{dia mes 2018}
+\date{2018}
 
 \subject{Taller de programación}
 
@@ -36,42 +36,35 @@
 \section{Algebra matricial}
 
 \begin{frame}{Transpuesta}
-El operador \textbf{transpose} (transpuesta) cambia las filas de una matriz en culumnas y las columnas en fila. En matlab el operador transpuesta se define como:
+\textbf{Operador transpuesta:} 
 \begin{center}
 Transpuesta\_A = A'
 \end{center}
+\begin{center}
+Cambia las filas de una matriz en culumnas y las columnas en fila
+\end{center}
 Ej. Ejecutar las siguientes líneas. Obtener conclusiones.
-\boiteviolette{
-A = [1 2 3 4 5 6];\\
-A'\\
-B = [1 2 3 ; 4 5 6 ; 7 8 9];\\
-B'
-}
+\lstinputlisting[xleftmargin=.3\textwidth]{scripts/ej1.m}
 \end{frame}
 
 \begin{frame}{Producto punto}
-El producto punto (producto escalar) se define como:
+\textbf{Producto escalar:}
 \begin{center}
-Vector\_resultante = sum(A\textbf{.*}B)
+Vector\_resultante = \textbf{sum}(A\textbf{.*}B)
 \end{center}
 Ej. Ejecutar las siguientes líneas. Obtener conclusiones.
-\boiteviolette{
-A = [1 2 3 4 5];\\
-B = [2 3 4 5 6];\\
-sum(A.*B)
-}
+\lstinputlisting[xleftmargin=.3\textwidth]{scripts/ej2.m}
+\end{frame}
+
+\begin{frame}{Producto punto}
 \begin{exampleblock}{Comando}
 Ver comando: dot()
 \end{exampleblock}
 Ej. Ejecutar las siguientes líneas. Obtener conclusiones.
-\boiteviolette{
-A = [1 2 3 4 5];\\
-B = [2 3 4 5 6];\\
-dot(A,B)
-}
+\lstinputlisting[xleftmargin=.3\textwidth]{scripts/ej3.m}
 \end{frame}
 
-\begin{frame}{Ejercicio práctico xxx}
+\begin{frame}{Ejercicio práctico 15}
 \begin{enumerate}
 \item Use la función dot para encontrar el producto punto de los siguientes vectores:
 \begin{itemize}
@@ -83,36 +76,21 @@ dot(A,B)
 \end{frame}
 
 \begin{frame}{Multiplicación matricial}
-El producto matricial se realiza utilizando el operador \textbf{*}
+\textbf{Producto matricial:}
 \begin{center}
 Vector\_resultante = A*B
 \end{center}
-\boiteviolette{
-A = [1 2 3 4 5];\\
-B = [2 3 4 5 6];\\
-VectorResultante = A*B
-}
+Ej. Ejecutar las siguientes líneas. Obtener conclusiones.
+\lstinputlisting[xleftmargin=.3\textwidth]{scripts/ej4.m}
 \end{frame}
 
 \begin{frame}{Potencias de matrices}
-Elevar a la potencia N cada elemento de la matriz se define mediante el operador \textbf{.\^}
+\textbf{Elevar a la potencia N cada elemento de la matriz} \textbf{.\^}
 \begin{center}
 Vector\_resultante = A.\^N
 \end{center}
-\boiteviolette{
-A = [1 2 3 4 5];\\
-B = 2;\\
-VectorResultante = A.\^B
-}
-Elevar a la potencia N  la matriz se define mediante el operador \textbf{\^}
-\begin{center}
-Vector\_resultante = A\^N
-\end{center}
-\boiteviolette{
-A = [1 2 3 4 5];\\
-B = 2;\\
-VectorResultante = A\^B
-}
+Ej. Ejecutar las siguientes líneas. Obtener conclusiones.
+\lstinputlisting[xleftmargin=.3\textwidth]{scripts/ej5.m}
 \end{frame}
 
 \begin{frame}{Inversión de matriz}
@@ -120,13 +98,7 @@ VectorResultante = A\^B
 Ver comando: inv()
 \end{exampleblock}
 Ej. Ejecutar las siguientes líneas. Obtener conclusiones.
-\boiteviolette{
-A = [1 2 3 ; 4 5 6 ; 7 8 9];\\
-Res = inv(A)
-}
-\begin{alertblock}{Importante}
-Existen matrices para las que no existe la inversa. Matlab enviará un mensaje de error a la ventana de comandos en caso de que la matriz no acepte inversa.
-\end{alertblock}
+\lstinputlisting[xleftmargin=.3\textwidth]{scripts/ej6.m}
 \end{frame}
 
 \begin{frame}{Determinantes}
@@ -134,16 +106,48 @@ Existen matrices para las que no existe la inversa. Matlab enviará un mensaje d
 Ver comando: det()
 \end{exampleblock}
 Ej. Ejecutar las siguientes líneas. Obtener conclusiones.
-\boiteviolette{
-A = [1 2 3 ; 4 5 6 ; 7 8 9];\\
-Res = det(A)
-}
-\begin{alertblock}{Importante}
-Si el determinante de la matriz es 0, la matriz no tiene inversa y se dice que es singular.
+\lstinputlisting[xleftmargin=.3\textwidth]{scripts/ej7.m}
+\end{frame}
+
+\begin{frame}{Inversión de matriz}
+Ej. Ejecutar las siguientes líneas. Obtener conclusiones.
+\lstinputlisting[xleftmargin=.3\textwidth]{scripts/ej8.m}
+\end{frame}
+
+\begin{frame}{Inversión de matriz}
+\begin{columns}
+\begin{column}{0.5\textwidth}
+\begin{center}
+\LARGE det(A)
+\end{center}
+\end{column}
+\begin{column}{0.5\textwidth}
+\begin{center}
+\includegraphics[scale=0.25]{images/img40.png}
+\end{center}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Inversión de matriz}
+\begin{columns}
+\begin{column}{0.5\textwidth}
+\begin{center}
+\LARGE det(A)
+\end{center}
+\end{column}
+\begin{column}{0.5\textwidth}
+\begin{center}
+\includegraphics[scale=0.25]{images/img40.png}
+\end{center}
+\end{column}
+\end{columns}
+\begin{alertblock}{Algebra!}
+det(A) = 0 \textbf{entonces} matriz singular. No existe la inversa!
 \end{alertblock}
 \end{frame}
 
-\begin{frame}{Ejercicio práctico xxx}
+\begin{frame}{Ejercicio práctico 16}
 \begin{enumerate}
 \item Encuentre el inverso de las siguientes matrices mágicas, tanto con la función inv como al elevar la matriz a la potencia -1:
 \begin{itemize}
@@ -152,20 +156,7 @@ Si el determinante de la matriz es 0, la matriz no tiene inversa y se dice que e
 \item magic(5)
 \end{itemize}
 \item Encuentre el determinante de cada una de las matrices de la parte 1
-\item Considere la siguiente matriz: A = [1 2 3 ; 2 4 6 ; 3 6 9]. Esperaría que fuera singular o no? (Recuerde que las matrices singulares tienen un determinante 0 y no tienen inverso.
 \end{enumerate}
-\end{frame}
-
-\begin{frame}{Producto cruz}
-\begin{exampleblock}{Comando}
-Ver comando: cross()
-\end{exampleblock}
-Ej. Ejecutar las siguientes líneas. Obtener conclusiones.
-\boiteviolette{
-A = [1 2 3 4 5];\\
-B = [6 7 8 9 10]\\
-ProductoCruz = cross(A,B)
-}
 \end{frame}
 
 \begin{frame}{Matrices especiales: unos y ceros}
@@ -175,9 +166,24 @@ Ver comando: ones()
 \begin{columns}
 \begin{column}{0.5\textwidth}
 Ej. Ejecutar las siguientes líneas. Obtener conclusiones.
-\boiteviolette{
-MatrizUnos = ones(2)
-}
+\lstinputlisting[xleftmargin=.2\textwidth]{scripts/ej9.m}
+\end{column}
+\begin{column}{0.5\textwidth}
+\begin{center}
+\includegraphics[scale=0.5]{images/pantalla1.png}
+\end{center}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Matrices especiales: unos y ceros}
+\begin{exampleblock}{Comando}
+Ver comando: ones()
+\end{exampleblock}
+\begin{columns}
+\begin{column}{0.5\textwidth}
+Ej. Ejecutar las siguientes líneas. Obtener conclusiones.
+\lstinputlisting[xleftmargin=.2\textwidth]{scripts/ej9.m}
 \end{column}
 \begin{column}{0.5\textwidth}
 \begin{center}
@@ -191,9 +197,7 @@ Ver comando: zeros()
 \begin{columns}
 \begin{column}{0.5\textwidth}
 Ej. Ejecutar las siguientes líneas. Obtener conclusiones.
-\boiteviolette{
-MatrizUnos = zeros(2,2)
-}
+\lstinputlisting[xleftmargin=.2\textwidth]{scripts/ej10.m}
 \end{column}
 \begin{column}{0.5\textwidth}
 \begin{center}
@@ -201,9 +205,6 @@ MatrizUnos = zeros(2,2)
 \end{center}
 \end{column}
 \end{columns}
-\begin{block}{Tener en cuenta}
-Cuando se usa una sola entrada, el resultado es una matriz cuadrada. Cuando se usan dos entradas, especifican el número de filas y columnas.
-\end{block}
 \end{frame}
 
 \begin{frame}{Matrices especiales: Matriz identidad}
@@ -213,9 +214,7 @@ Ver comando: eye()
 \begin{columns}
 \begin{column}{0.5\textwidth}
 Ej. Ejecutar las siguientes líneas. Obtener conclusiones.
-\boiteviolette{
-MatrizIdentidad = eye(3)
-}
+\lstinputlisting[xleftmargin=.2\textwidth]{scripts/ej11.m}
 \end{column}
 \begin{column}{0.5\textwidth}
 \begin{center}
@@ -223,47 +222,65 @@ MatrizIdentidad = eye(3)
 \end{center}
 \end{column}
 \end{columns}
-\begin{block}{Tener en cuenta}
-Cuando se usa una sola entrada, el resultado es una matriz cuadrada. Cuando se usan dos entradas, especifican el número de filas y columnas.
+\end{frame}
+
+\begin{frame}{Ejercicio práctico 17}
+\begin{center}
+\begin{itemize}
+\item Considere la siguiente matriz: A = [1 2 3 ; 2 4 6 ; 3 6 9]. Calcule el determinante de A. Es inversible?
+\end{itemize}
+\end{center}
+\begin{block}{Recordar}
+Si el $det(A) \neq 0$, entonces la matriz es inversible.
 \end{block}
 \end{frame}
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% Sección de consultas
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{Consultas}
-\begin{frame}{Consultas}
+\begin{frame}{Ejercicio práctico 17}
 \begin{center}
-\includegraphics[scale=0.3]{images/consultas.png}
+\includegraphics[scale=0.35]{images/img43.png}
 \end{center}
 \end{frame}
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% Sección de bibliografía
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{Bibliografia}
-
-\begin{frame}{Bibliografía}
-\begin{columns}
-\begin{column}{0.5\textwidth}
+\begin{frame}{Ejercicio práctico 17}
 \begin{center}
-\includegraphics[scale=0.4]{images/biblio1.png}
+\LARGE inv(A)
+\end{center}
+\end{frame}
+
+\begin{frame}{Ejercicio práctico 17}
+\textbf{Resupuesta:}
+\begin{block}{Tener en cuenta}
+Si el $det(A)\neq 0$, entonces las columnas de A son linealmente independientes y, por lo tanto, A es inversible.
+\end{block}
+\end{frame}
+
+\begin{frame}{Ejercicio práctico 17}
+\textbf{Resupuesta:}
+\begin{block}{Tener en cuenta}
+Si el $det(A)\neq 0$, entonces las columnas de A son linealmente independientes y, por lo tanto, A es inversible.
+\end{block}
+\begin{center}
+Matriz propuesta\\
+\includegraphics[scale=0.5]{images/img44.png}
+\end{center}
+\end{frame}
+
+\begin{frame}{Ejercicio práctico 17}
+\begin{columns}
+\begin{column}{0.6\textwidth}
+\begin{center}
+\textbf{Eran todas linealmente dependientes }
 \end{center}
 \end{column}
-\begin{column}{0.5\textwidth}
+\begin{column}{0.3\textwidth}
 \begin{center}
-\includegraphics[scale=0.5]{images/biblio2.png}
+\includegraphics[scale=0.3]{images/img45.png}
 \end{center}
 \end{column}
 \end{columns}
+\begin{center}
+\includegraphics[scale=0.6]{images/img42.png}
+\end{center}
 \end{frame}
 
 \end{document}

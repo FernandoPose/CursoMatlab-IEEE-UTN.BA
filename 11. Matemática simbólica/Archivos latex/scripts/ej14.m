@@ -1,0 +1,1 @@
+[x,y,z] = solve(Ec1,Ec2,Ec3)

@@ -1,0 +1,3 @@
+while criterio
+   %instrucciones
+end

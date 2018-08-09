@@ -1,7 +1,6 @@
+
 \documentclass{bredelebeamer}
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \title[Programación en MatLAB]{Introducción a la programación con MatLAB}
 \subtitle{Módulo 09 - Funciones lógicas y estructuras de control}
 
@@ -52,7 +51,7 @@ Tipos de estructuras de código:
 
 \begin{frame}{Introducción}
 \begin{center}
-\includegraphics[scale=0.7]{images/pantalla3.png}
+\includegraphics[scale=0.55]{images/pantalla3.png}
 \end{center}
 \begin{block}{Tener en cuenta}
 Estructuras de selección y repetición dependen de operadores relacionales y lógico.
@@ -78,20 +77,12 @@ $\sim$=             & no igual a          \\ \hline
 
 \begin{frame}{Operadores relacionales}
 Ej. Ejecutar las siguientes líneas. Obtener conclusiones.
-\boiteviolette{
-x = 5;\\
-y = 1;\\
-x<y
-}
+ \lstinputlisting[xleftmargin=.5\textwidth]{scripts/ej1.m}
 \end{frame}
 
 \begin{frame}{Operadores relacionales}
 Ej. Ejecutar las siguientes líneas. Obtener conclusiones.
-\boiteviolette{
-x = 5;\\
-y = 1;\\
-x<y
-}
+ \lstinputlisting[xleftmargin=.5\textwidth]{scripts/ej1.m}
 Las comparaciones pueden ser verdaderas ó falsas. 
 \begin{itemize}
 \item Valor positivo: Verdadero (true)
@@ -101,20 +92,12 @@ Las comparaciones pueden ser verdaderas ó falsas.
 
 \begin{frame}{Operadores relacionales}
 Ej. Ejecutar las siguientes líneas. Obtener conclusiones.
-\boiteviolette{
-x = 1:5;\\
-y = x-4;\\
-x<y
-}
+ \lstinputlisting[xleftmargin=.5\textwidth]{scripts/ej2.m}
 \end{frame}
 
 \begin{frame}{Operadores relacionales}
 Ej. Ejecutar las siguientes líneas. Obtener conclusiones.
-\boiteviolette{
-x = 1:5;\\
-y = x-4;\\
-x<y
-}
+\lstinputlisting[xleftmargin=.5\textwidth]{scripts/ej2.m}
 \begin{alertblock}{Tener en cuenta}
 Para que una comparación sea verdadera, debe ser \textbf{verdadera} para cada elemento de la matriz.
 \end{alertblock}
@@ -154,12 +137,7 @@ $\sim$          & not            \\ \hline
 
 \begin{frame}{Operadores lógicos}
 Ej. Ejecutar las siguientes líneas. Obtener conclusiones.
-\boiteviolette{
-x = [1 2 3 4 5];\\
-y = [-2 0 2 4 6];\\
-z = [8 8 8 8 8];\\
-(z>x)\&(z>y);
-}
+\lstinputlisting[xleftmargin=.4\textwidth]{scripts/ej3.m}
 \end{frame}
 
 \begin{frame}{Estructura de selección - if}
@@ -169,11 +147,8 @@ z = [8 8 8 8 8];\\
 \includegraphics[scale=0.5]{images/pantalla5.png}
 \end{center}
 \end{column}
-\begin{column}{0.3\textwidth}
-\textbf{if} \textit{enunciado de comparación}\\
-	....\\
-    instrucciones\\
-\textbf{end}
+\begin{column}{0.5\textwidth}
+\lstinputlisting[]{scripts/ej4.m}
 \end{column}
 \end{columns}
 \begin{center}
@@ -188,14 +163,8 @@ Se ejecutan los comandos si y sólo si la condición es verdadera
 \includegraphics[scale=0.5]{images/pantalla4.png}
 \end{center}
 \end{column}
-\begin{column}{0.3\textwidth}
-\textbf{if} \textit{enunciado de comparación}\\
-	....\\
-    instrucciones 1\\
-\textbf{else}\\
- 	....\\
-    instrucciones 2\\
-\textbf{end}
+\begin{column}{0.5\textwidth}
+\lstinputlisting[]{scripts/ej5.m}
 \end{column}
 \end{columns}
 \begin{center}
@@ -210,20 +179,8 @@ Se ejecutan las instrucciones 1 si la condición es verdadera y las instruccione
 \includegraphics[scale=0.2]{images/pantalla6.png}
 \end{center}
 \end{column}
-\begin{column}{0.3\textwidth}
-\textbf{if} \textit{enunciado de comparación}\\
-	....\\
-    instrucciones 1\\
-\textbf{elseif} \textit{enunciado de comparación}\\
- 	....\\
-    instrucciones 2\\
-\textbf{elseif} \textit{enunciado de comparación}\\
- 	....\\
-    instrucciones 3\\
-\textbf{else}\\
- 	....\\
-    instrucciones 4\\
-\textbf{end}
+\begin{column}{0.5\textwidth}
+\lstinputlisting[]{scripts/ej6.m}
 \end{column}
 \end{columns}
 \end{frame}
@@ -232,7 +189,7 @@ Se ejecutan las instrucciones 1 si la condición es verdadera y las instruccione
 Escriba una función if para cada uno de los siguientes problemas si supone que la entrada a la función es un escalar.
 \begin{enumerate}
 \item Suponga que en un estado la edad legal para beber es 21. Escriba y pruebe una función para determinar si una persona es lo suficientemente madura para beber.
-\item Cuando una parte se fabrica, las dimensiones usualmente se especifican con una tolerancia. Suponga que cierta parte necesita tener 5.4cm de largo, más o menos 0.1cm (5.4 +/- 10cm). Escriba una función para determinar si una parte está dentro de dichas especificaciones.
+\item Cuando una parte se fabrica, las dimensiones usualmente se especifican con una tolerancia. Suponga que cierta parte necesita tener 5.4cm de largo, más o menos 0.1cm (5.4 +/- 0.1cm). Escriba una función para determinar si una parte está dentro de dichas especificaciones.
 \end{enumerate}
 \end{frame}
 
@@ -245,14 +202,7 @@ Ejecuta ciertas sentencias basadas en el valor de una variable o expresión.
 \end{center}
 \end{column}
 \begin{column}{0.5\textwidth}
-\textbf{switch} \textit{expresión}\\
-   \textbf{case} opcion1\\
-      instrucciones1\\
-   \textbf{case} opcion2\\
-      instrucciones2\\
-   \textbf{otherwise}
-      instrucciones n\\
-\textbf{end}
+\lstinputlisting[]{scripts/ej7.m}
 \end{column}
 \end{columns}
 
@@ -267,15 +217,7 @@ Ver comando: \textbf{menu}
 \end{exampleblock}
 
 Ej. Ejecutar las siguientes líneas. Obtener conclusiones.
-\boiteviolette{
-opcion = menu('Mi primer menu','opcion 1','opcion 2');\\
-switch opcion\\
-    case 1\\
-        disp('opcion 1')\\
-    case 2\\
-        disp('opcion 2')\\
-end
-}
+\lstinputlisting[xleftmargin=.1\textwidth]{scripts/menu.m}
 \end{frame}
 
 \begin{frame}{Ejercicio práctico 12}
@@ -300,9 +242,7 @@ más de 3 dulces = 1.65\$ + 0.3 * (número ordenado -3)
 \end{center}
 \end{column}
 \begin{column}{0.5\textwidth}
-\textbf{for} \textit{indice = comienzo\textbf{:}incremento\textbf{:}final}\\
-   instrucciones\\
-\textbf{end}
+\lstinputlisting[]{scripts/ej8.m}
 \end{column}
 \end{columns}
 \begin{center}
@@ -322,10 +262,8 @@ Ejecutar un grupo de instrucciones mientras se cumpla una condición lógica
 \includegraphics[scale=0.7]{images/pantalla9.png}
 \end{center}
 \end{column}
-\begin{column}{0.3\textwidth}
-\textbf{while} \textit{criterio}\\
-   instrucciones\\
-\textbf{end}
+\begin{column}{0.5\textwidth}
+\lstinputlisting[]{scripts/ej9.m}
 \end{column}
 \end{columns}
 \end{frame}
@@ -345,47 +283,6 @@ Considere la siguiente matriz de valores: x = [45,23,17,34,85,33] determine cuá
 \begin{column}{0.5\textwidth}
 \begin{center}
 \includegraphics[scale=0.3]{images/img40.png}
-\end{center}
-\end{column}
-\end{columns}
-\end{frame}
-
-
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% Sección de consultas
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{Consultas}
-\begin{frame}{Consultas}
-\begin{center}
-\includegraphics[scale=0.3]{images/consultas.png}
-\end{center}
-\end{frame}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% Sección de bibliografía
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{Bibliografia}
-
-\begin{frame}{Bibliografía}
-\begin{columns}
-\begin{column}{0.5\textwidth}
-\begin{center}
-\includegraphics[scale=0.4]{images/biblio1.png}
-\end{center}
-\end{column}
-\begin{column}{0.5\textwidth}
-\begin{center}
-\includegraphics[scale=0.5]{images/biblio2.png}
 \end{center}
 \end{column}
 \end{columns}

@@ -106,11 +106,7 @@ Ver comando: \textbf{input()}
 
 \begin{frame}{Entrada definida por el usuario}
 Ej. Ejecutar las siguientes líneas. Obtener conclusiones.
-\boiteviolette{
-\begin{center}
-z = input('Ingresar un valor');
-\end{center}
-}
+\lstinputlisting[xleftmargin=.3\textwidth]{scripts/ej1.m}
 \begin{columns}
 \begin{column}{0.5\textwidth}
 \begin{center}
@@ -129,11 +125,7 @@ Workspace
 
 \begin{frame}{Entrada definida por el usuario}
 Ej. Ejecutar las siguientes líneas. Obtener conclusiones.
-\boiteviolette{
-\begin{center}
-z = input('Ingresar un valor');
-\end{center}
-}
+\lstinputlisting[xleftmargin=.3\textwidth]{scripts/ej1.m}
 \begin{columns}
 \begin{column}{0.5\textwidth}
 \begin{center}
@@ -179,19 +171,12 @@ Ver comando: \textbf{disp(x)}
 
 \begin{frame}{Opciones de salida}
 Ej. Ejecutar las siguientes líneas. Obtener conclusiones.
-\boiteviolette{
-x = 1:5;\\
-disp('Los valores de x son: ');\\
-disp(x);
-}
+\lstinputlisting[xleftmargin=.3\textwidth]{scripts/ej2.m}
 \end{frame}
 
 \begin{frame}{Opciones de salida}
 Ej. Ejecutar las siguientes líneas. Obtener conclusiones.
-\boiteviolette{
-x = 1:5;\\
-disp(['Los valores de x son: ' \textbf{num2str(x)}]);
-}
+\lstinputlisting[xleftmargin=.1\textwidth]{scripts/ej3.m}
 \begin{exampleblock}{Comando}
 Ver comando: \textbf{num2str(x)}
 \end{exampleblock}
@@ -229,10 +214,7 @@ La función \textbf{fprintf} además de desplegar los valores permite especifica
 
 \begin{frame}{Salida formateada}
 Ej. Ejecutar las siguientes líneas. Obtener conclusiones.
-\boiteviolette{
-cantidad = 5;\\
-fprintf('Hay \textbf{\%f} personas en mi casa',cantidad);
-}
+\lstinputlisting[xleftmargin=.2\textwidth]{scripts/ej4.m}
 \end{frame}
 
 \begin{frame}{Salida formateada}
@@ -253,22 +235,12 @@ Tipo de campo & Resultado                      \\ \hline
 
 \begin{frame}{Salida formateada}
 Ej. Ejecutar las siguientes líneas. Obtener conclusiones.
-\boiteviolette{
-cantidad = 5;\\
-fprintf('Hay \textbf{\%f} personas en mi casa',cantidad);\\
-cantidad = 7;\\
-fprintf('Hay \textbf{\%f} personas en tu casa',cantidad);
-}
+\lstinputlisting[xleftmargin=.2\textwidth]{scripts/ej5.m}
 \end{frame}
 
 \begin{frame}{Salida formateada}
 Ej. Ejecutar las siguientes líneas. Obtener conclusiones.
-\boiteviolette{
-cantidad = 5;\\
-fprintf('Hay \textbf{\%f} personas en mi casa',cantidad);\\
-cantidad = 7;\\
-fprintf('Hay \textbf{\%f} personas en tu casa',cantidad);
-}
+\lstinputlisting[xleftmargin=.2\textwidth]{scripts/ej5.m}
 \begin{block}{Tener en cuenta}
 Para indicar nueva línea utilizar el comando de formato: \textbf{\textbackslash n}
 \end{block}
@@ -291,10 +263,7 @@ Comando de formato & Acción resultante     \\ \hline
 
 \begin{frame}{Salida formateada}
 Ej. Ejecutar las siguientes líneas. Obtener conclusiones.
-\boiteviolette{
-voltaje = 3.5;\\
-fprintf('El voltage es \textbf{\%.2f}\textbackslash n',voltaje);
-}
+\lstinputlisting[xleftmargin=.2\textwidth]{scripts/ej6.m}
 \end{frame}
 
 \begin{frame}{Salida formateada}
@@ -306,41 +275,41 @@ Para incluir el signo porcentaje en un enunciado fprintf, se debe ingresar \%\% 
 \end{center}
 \end{frame}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% Sección de consultas
+% % Sección de consultas
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Consultas}
-\begin{frame}{Consultas}
-\begin{center}
-\includegraphics[scale=0.3]{images/consultas.png}
-\end{center}
-\end{frame}
+% \section{Consultas}
+% \begin{frame}{Consultas}
+% \begin{center}
+% \includegraphics[scale=0.3]{images/consultas.png}
+% \end{center}
+% \end{frame}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% Sección de bibliografía
+% % Sección de bibliografía
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Bibliografia}
+% \section{Bibliografia}
 
-\begin{frame}{Bibliografía}
-\begin{columns}
-\begin{column}{0.5\textwidth}
-\begin{center}
-\includegraphics[scale=0.4]{images/biblio1.png}
-\end{center}
-\end{column}
-\begin{column}{0.5\textwidth}
-\begin{center}
-\includegraphics[scale=0.5]{images/biblio2.png}
-\end{center}
-\end{column}
-\end{columns}
-\end{frame}
+% \begin{frame}{Bibliografía}
+% \begin{columns}
+% \begin{column}{0.5\textwidth}
+% \begin{center}
+% \includegraphics[scale=0.4]{images/biblio1.png}
+% \end{center}
+% \end{column}
+% \begin{column}{0.5\textwidth}
+% \begin{center}
+% \includegraphics[scale=0.5]{images/biblio2.png}
+% \end{center}
+% \end{column}
+% \end{columns}
+% \end{frame}
 
 \end{document}

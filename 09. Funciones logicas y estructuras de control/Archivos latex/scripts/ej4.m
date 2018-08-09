@@ -1,0 +1,4 @@
+if enunciadoDeComparacion
+    %instrucciones
+end
+

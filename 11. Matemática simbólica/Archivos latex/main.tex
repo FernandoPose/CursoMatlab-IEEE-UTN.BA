@@ -5,7 +5,7 @@
 \title[Programación en MatLAB]{Introducción a la programación con MatLAB}
 \subtitle{Módulo 11 - Matemática simbólica}
 
-\author{Autor1 - Autor2 - Autor3\inst{1}}
+\author{Agustín - Andrés - Gabriel - Fernando\inst{1}}
 \institute[UTN.BA]
 {
   \inst{1}%
@@ -13,7 +13,7 @@
   Facultad Regional Buenos Aires
   }
 
-\date{día mes 2018}
+\date{2018}
 
 \subject{Taller de programación}
 
@@ -36,20 +36,36 @@
 \section{Matemática simbólica}
 
 \begin{frame}{Introducción}
+\textbf{Objetivos de esta unidad:}
+
+
+
+
+\begin{columns}
+\begin{column}{0.35\textwidth}
 \begin{center}
-\textbf{Con frecuencia es preferible manipular las ecuaciones simbólicamente antes de sustituir valores para las variables.}
-\end{center} 
-Los objetivos de esta unidad son aprender a:
+\includegraphics[scale=0.4]{images/img40.png}
+\end{center}
+\end{column}
+\begin{column}{0.8\textwidth}
+\begin{center}
 \begin{itemize}
 \item Crear y manipular variables simbólicas
 \item Resolver expresiones y ecuaciones simbólicas
 \item Graficar ecuaciones simbólicas
-\item Introducir al alumno en diferenciación y integración de ecuaciones simbólicas
+\item Introducir a la diferenciación y integración de ecuaciones simbólicas
 \end{itemize}
+\end{center}
+\end{column}
+\end{columns}
+
+
+
+
 \end{frame}
 
 \begin{frame}{Creación de variables simbólicas}
-Existen dos formas posibles de declarar una variable simbólica, las mismas son:
+\textbf{Declaración de variable simbólica:}
 \begin{enumerate}
 \item x = sym('x')
 \item syms x
@@ -57,9 +73,24 @@ Existen dos formas posibles de declarar una variable simbólica, las mismas son:
 \begin{center}
 Ambas formas hacen al carácter 'x' igual a la variable simbólica x.
 \end{center}
-Creación de una variable simbólica utilizando otra existente:
+\textbf{Variable simbólica utilizando otras existentes:}
 \begin{equation*}
 y = \frac{2*(x+3)^2}{x^2+6*x+9}
+\end{equation*}
+\end{frame}
+
+\begin{frame}{Creación de variables simbólicas}
+\textbf{Declaración de variable simbólica:}
+\begin{enumerate}
+\item x = sym('x')
+\item syms x
+\end{enumerate}
+\begin{center}
+Ambas formas hacen al carácter 'x' igual a la variable simbólica x.
+\end{center}
+\textbf{Variable simbólica utilizando otras existentes:}
+\begin{equation*}
+y = \frac{2*(x+2)^2}{x^2+6*x+9}
 \end{equation*}
 \begin{block}{Tener en cuenta}
 El comando \textbf{syms} permite crear múltiples variables simbólicas al mismo tiempo.
@@ -71,7 +102,7 @@ El comando \textbf{syms} permite crear múltiples variables simbólicas al mismo
 syms x
 \end{equation*}
 \begin{equation*}
-y = \frac{2*(x+3)^2}{x^2+6*x+9}
+y = \frac{2*(x+2)^2}{x^2+6*x+9}
 \end{equation*}
 \begin{columns}
 \begin{column}{0.5\textwidth}
@@ -88,163 +119,67 @@ y = \frac{2*(x+3)^2}{x^2+6*x+9}
 \end{frame}
 
 \begin{frame}{Manipulación de expresiones y ecuaciones simbólicas}
-A continuación, las funciones de manipulación de variables simbólicas se ejemplificarán utilizando la siguiente función:
-\begin{equation*}
-y = \frac{2*(x+2)^2}{x^2+6*x+9}
-\end{equation*}
-\end{frame}
-
-\begin{frame}{Manipulación de expresiones y ecuaciones simbólicas}
-\begin{center}
-Extracción de numeradores y denominadores
-\end{center}
+\textbf{Extracción de numeradores y denominadores:}
 \begin{exampleblock}{Comando}
 Ver comando: [num,den] = numden(var)
 \end{exampleblock}
 Ej. Ejecutar las siguientes líneas. Obtener conclusiones.
-\boiteviolette{
-\begin{equation*}
-syms x
-\end{equation*}
-\begin{equation*}
-y = \frac{2*(x+2)^2}{x^2+6*x+9}
-\end{equation*}
-\begin{equation*}
-[num,den] = numden(y)
-\end{equation*}
-}
+\lstinputlisting[xleftmargin=.3\textwidth]{scripts/ej1.m}
 \end{frame}
 
 \begin{frame}{Manipulación de expresiones y ecuaciones simbólicas}
-\begin{center}
-Expansión de expresiones\\
-\textit{(Multiplica todas las porciones de la ecuación)}
-\end{center}
+\textbf{Expansión de expresiones:}
 \begin{exampleblock}{Comando}
 Ver comando: expand(var)
 \end{exampleblock}
 Ej. Ejecutar las siguientes líneas. Obtener conclusiones.
-\boiteviolette{
-\begin{equation*}
-syms x
-\end{equation*}
-\begin{equation*}
-y = \frac{2*(x+2)^2}{x^2+6*x+9}
-\end{equation*}
-\begin{equation*}
-[num,den] = numden(y)
-\end{equation*}
-\begin{equation*}
-expand(num)
-\end{equation*}
-}
+\lstinputlisting[xleftmargin=.3\textwidth]{scripts/ej2.m}
 \end{frame}
 
 \begin{frame}{Manipulación de expresiones y ecuaciones simbólicas}
-\begin{center}
-Factorización de expresiones\\
-\textit{(Factoriza la ecuación)}
-\end{center}
+\textbf{Factorización de expresiones:}
 \begin{exampleblock}{Comando}
 Ver comando: factor(var)
 \end{exampleblock}
 Ej. Ejecutar las siguientes líneas. Obtener conclusiones.
-\boiteviolette{
-\begin{equation*}
-syms x
-\end{equation*}
-\begin{equation*}
-y = \frac{2*(x+2)^2}{x^2+6*x+9}
-\end{equation*}
-\begin{equation*}
-[num,den] = numden(y)
-\end{equation*}
-\begin{equation*}
-factor(num)
-\end{equation*}
-}
+\lstinputlisting[xleftmargin=.3\textwidth]{scripts/ej3.m}
 \end{frame}
 
 \begin{frame}{Manipulación de expresiones y ecuaciones simbólicas}
-\begin{center}
-Recolección de términos\\
-\textit{(Recopila términos similares)}
-\end{center}
+\textbf{Recolección de términos:}
 \begin{exampleblock}{Comando}
 Ver comando: collect(var)
 \end{exampleblock}
 Ej. Ejecutar las siguientes líneas. Obtener conclusiones.
-\boiteviolette{
-\begin{equation*}
-syms x
-\end{equation*}
-\begin{equation*}
-y = \frac{2*(x+2)^2}{x^2+6*x+9}
-\end{equation*}
-\begin{equation*}
-[num,den] = numden(y)
-\end{equation*}
-\begin{equation*}
-collect(num)
-\end{equation*}
-}
+\lstinputlisting[xleftmargin=.3\textwidth]{scripts/ej4.m}
 \end{frame}
 
 \begin{frame}{Simplificación de ecuaciones simbólicas}
+\textbf{Simplificación de ecuación:}
 \begin{exampleblock}{Comando}
 Ver comando: simplify(var)
 \end{exampleblock}
 Ej. Ejecutar las siguientes líneas. Obtener conclusiones.
-\boiteviolette{
-\begin{equation*}
-z = sym('x^3-1=(x-3)*(x+3)') 
-\end{equation*}
-\begin{equation*}
-simplify(z)
-\end{equation*}
-}
+\lstinputlisting[xleftmargin=.3\textwidth]{scripts/ej5.m}
 \end{frame}
 
-\begin{frame}{Ejercicio práctico xxx}
+\begin{frame}{Ejercicio práctico 18}
 \begin{enumerate}
-\item Cree las variables simbólicas x,a,b,c y d
-\item Verifique que las variables creadas en el item (1) se mencionan en la ventana del área de trabajo. Úselas para crear las siguientes expresiones simbólicas:
+\item Cree la variable simbólica x y verifique que se encuentra en el workspace
+\item Cree las siguientes expresiones simbólicas:
 \begin{itemize}
 \item $ex1 = x^2-1$
 \item $ex2 = (x+1)^2$
-\item $ex3 = a*x^2-1$
-\item $ex4 = a*x^2+b*x+c$
-\item $ex5 = a*x^3+b*x^2+c*x+d$
 \end{itemize}
 \item Multiplique ex1 por ex2 y llame al resultado y1
 \item Divida ex1 entre ex2 y llame al resultado y2
-\item Use la función numden para extraer el numerador y denominador de y1 y y2
-\item Use las funciones factor, expand, collect y simplify en y1 e y2.\\Obtenga conclusiones.
+\item Use la función \textbf{numden} para extraer el numerador y denominador de y1 y y2
+\item Use las funciones \textbf{factor}, \textbf{expand}, \textbf{collect} y \textbf{simplify} en y1 e y2.
 \end{enumerate}
 \end{frame}
 
-\begin{frame}{Sugerencia}
-Para crear un polinomio simbólico a partir de un vector de números se utiliza la función \textbf{poly2sym}
-\begin{exampleblock}{Comando}
-Ver comando: poly2sym()
-\end{exampleblock}
-Ej. Ejecutar las siguientes líneas. Obtener conclusiones.
-\boiteviolette{
-\begin{equation*}
-a = [1 3 2]
-\end{equation*}
-\begin{equation*}
-b = poly2sym(a)
-\end{equation*}
-}
-De modo similar, \textbf{sym2poly} convierte un polinomio en un vector de valores.
-\begin{exampleblock}{Comando}
-Ver comando: sym2poly()
-\end{exampleblock}
-\end{frame}
-
 \begin{frame}{Resolución de expresiones y ecuaciones simbólicas}
-Para la resolución de expresiones y ecuaciones (dos expresiones igualadas) se utilizará la función solve.
+\textbf{Resolución de expresiones y ecuaciones:}
 \begin{exampleblock}{Comando}
 Ver comando: solve()
 \end{exampleblock}
@@ -254,57 +189,38 @@ Se utilizarán dos enfoques, los mismos son:
 \item Cuando se trata de una ecuación
 \begin{enumerate}
 \item Expresión igualada a 0
-\item Expresión igualada a una expresión distinta de 0 (aplicando transformación)
-\item Expresión igualada a una expresión distinta de 0 (sin transformación)
+\item Expresión igualada a una expresión (aplicando transformación)
+\item Expresión igualada a una expresión (sin transformación)
 \end{enumerate}
 \end{enumerate}
 \end{frame}
 
 \begin{frame}{Resolución de expresiones y ecuaciones simbólicas: Caso 1}
-\begin{center}
-Utilización de la función \textbf{solve} en una expresión
-\end{center}
+\textbf{Utilización de la función solve en una expresión:}\\
 Ej. Ejecutar las siguientes líneas. Obtener conclusiones.
-\boiteviolette{
-\begin{equation*}
-E1 = x-3 
-\end{equation*}
-\begin{equation*}
-solve(E1)
-\end{equation*}
-}
+\lstinputlisting[xleftmargin=.3\textwidth]{scripts/ej6.m}
+\end{frame}
+
+\begin{frame}{Resolución de expresiones y ecuaciones simbólicas: Caso 1}
+\textbf{Utilización de la función solve en una expresión:}\\
+Ej. Ejecutar las siguientes líneas. Obtener conclusiones.
+\lstinputlisting[xleftmargin=.3\textwidth]{scripts/ej6.m}
 \begin{alertblock}{Importante}
 Cuando se usa en una expresión, la función \textbf{solve} iguala la expresión a cero y resuelve.
 \end{alertblock}
 \end{frame}
 
 \begin{frame}{Resolución de expresiones y ecuaciones simbólicas: Caso 1}
+\textbf{Especificación de la variable a resolver:}\\
 Ej. Ejecutar las siguientes líneas. Obtener conclusiones.
-\boiteviolette{
-\begin{equation*}
-solve('a*x^2+b*x+c')
-\end{equation*}
-}
+\lstinputlisting[xleftmargin=.3\textwidth]{scripts/ej13.m}
 \begin{alertblock}{Importante}
 Matlab por defecto resuelve para la variable simbólica x. 
 \end{alertblock}
 \end{frame}
 
-\begin{frame}{Resolución de expresiones y ecuaciones simbólicas: Caso 1}
-Para el caso en que se desee especificar la variable por resolver, ésta debe ser indicada en el segundo campo de la función.\\
-Ej. Ejecutar las siguientes líneas. Obtener conclusiones.
-\boiteviolette{
-\begin{equation*}
-solve('a*x^2+b*x+c','a')
-\end{equation*}
-}
-\begin{block}{Tener en cuenta}
-Si \textbf{a} se define específicamente como variable simbólica, no es necesaria encerrarla entre apóstrofes.
-\end{block}
-\end{frame}
-
 \begin{frame}{Resolución de expresiones y ecuaciones simbólicas: Caso 2.1 ó 2.2}
-Si la ecuación es simple, puede transformarse en una expresión al restar el lado derecho del lado izquierdo.\\
+\textbf{Transformación en una expresión:}\\
 Para el caso:
 \begin{equation*}
 5*x^2+6*x+3=10
@@ -314,58 +230,39 @@ Se podría reformular como:
 5*x^2+6*x-7=0
 \end{equation*}
 y resolver la ecuación ejecutando las siguientes líneas:
-\boiteviolette{
-\begin{equation*}
-solve('5*x^2+6*x-7') 
-\end{equation*}
-}
+\lstinputlisting[xleftmargin=.3\textwidth]{scripts/ej7.m}
 \end{frame}
 
 \begin{frame}{Resolución de expresiones y ecuaciones simbólicas: Caso 2.3}
-Si la ecuación es compleja, se define una nueva ecuación y luego se procede a resolver la misma.
+\textbf{Sin transformación de expresión:}\\
 Para el caso:
 \begin{equation*}
 5*x^2+6*x+3=10
 \end{equation*}
 
 Se resuelve la ecuación ejecutando las siguientes líneas:
-\boiteviolette{
-\begin{equation*}
-E2 = sym('5*x^2+6*x+3=10') 
-\end{equation*}
-\begin{equation*}
-solve(E2) 
-\end{equation*}
-}
+\lstinputlisting[xleftmargin=.3\textwidth]{scripts/ej8.m}
 \end{frame}
 
-\begin{frame}{Ejercicio práctico xxx}
+\begin{frame}{Ejercicio práctico 19}
 \begin{enumerate}
-\item Cree las variables simbólicas x,a,b,c y d
-\item Verifique que las variables creadas en el item (1) se mencionan en la ventana del área de trabajo. Úselas para crear las siguientes expresiones simbólicas:
+\item Cree las variables simbólicas x,a,b y c 
+\item Cree las siguientes expresiones simbólicas:
 \begin{itemize}
-\item $ex1 = x^2-1$
-\item $ex2 = (x+1)^2$
-\item $ex3 = a*x^2-1$
-\item $ex4 = a*x^2+b*x+c$
-\item $ex5 = a*x^3+b*x^2+c*x+d$
+\item $ex1 = a*x^2-1$
+\item $ex2 = a*x^2+b*x+c$
 \end{itemize}
 \begin{itemize}
-\item $eq1 = x^2=1$
-\item $eq2 = (x+1)^2=0$
-\item $eq3 = a*x^2=1$
-\item $eq4 = a*x^2+b*x+c=0$
-\item $eq5 = a*x^3+b*x^2+c*x+d=0$
+\item $eq1 = a*x^2=1$
+\item $eq2 = a*x^2+b*x+c=0$
 \end{itemize}
-\item Use la función solve para resolver ex1 y eq1
-\item Use la función solve para resolver ex2 y eq2
-\item Use la función solve para resolver ex3 y eq3 tanto para x como para a
-\item Use la función solve para resolver ex4 y eq4 tanto para x como para a
+\item Use la función solve para resolver ex1 y eq1 tanto para x como para a
+\item Use la función solve para resolver ex2 y eq2 tanto para x como para a
 \end{enumerate}
 \end{frame}
 
 \begin{frame}{Resolución de sistemas de ecuaciones}
-Se desea resolver el siguiente sistemas de ecuaciones utilizando la función \textbf{solve}:
+\textbf{Resolver el siguiente sistemas de ecuaciones:}
 \begin{equation*}
 \left\{\begin{matrix}
 3x + 2y - z = 10  \\ 
@@ -379,42 +276,34 @@ Se desea resolver el siguiente sistemas de ecuaciones utilizando la función \te
 \begin{itemize}
 \item Definir las tres ecuaciones simbólicas
 \end{itemize}
-\begin{equation*}
-Ec1 = sym('3*x+2*y-z=10')
-\end{equation*}
-\begin{equation*}
-Ec2 = sym('-x+3*y+2*z=5')
-\end{equation*}
-\begin{equation*}
-Ec3 = sym('x-y-z=-1')
-\end{equation*}
+\lstinputlisting[xleftmargin=.3\textwidth]{scripts/ej15.m}
+\end{frame}
+
+\begin{frame}{Resolución de sistemas de ecuaciones}
+\begin{itemize}
+\item Definir las tres ecuaciones simbólicas
+\end{itemize}
+\lstinputlisting[xleftmargin=.3\textwidth]{scripts/ej15.m}
 Luego utilizando la función \textbf{solve} se obtienen la solución (valores de x, y, z):
-\boiteviolette{
-\begin{center}
-[x,y,z] = solve(Ec1,Ec2,Ec3)
-\end{center}
-}
+\lstinputlisting[xleftmargin=.3\textwidth]{scripts/ej14.m}
 \end{frame}
 
 \begin{frame}{Graficación de ecuaciones simbólicas}
-Se realizará la gráfica de una función de la forma:
-\begin{center}
-\begin{equation*}
-y = f(x)
-\end{equation*}
-\end{center}
+\textbf{Graficación de y=f(x):}
 \begin{exampleblock}{Comando}
 Ver comando: ezplot()
 \end{exampleblock}
 Ej. Ejecutar las siguientes líneas. Obtener conclusiones.
-\boiteviolette{
-\begin{equation*}
-y = sym('x^2-2') 
-\end{equation*}
-\begin{equation*}
-ezplot(y)
-\end{equation*}
-}
+\lstinputlisting[xleftmargin=.3\textwidth]{scripts/ej9.m}
+\end{frame}
+
+\begin{frame}{Graficación de ecuaciones simbólicas}
+\textbf{Graficación de y=f(x):}
+\begin{exampleblock}{Comando}
+Ver comando: ezplot()
+\end{exampleblock}
+Ej. Ejecutar las siguientes líneas. Obtener conclusiones.
+\lstinputlisting[xleftmargin=.3\textwidth]{scripts/ej9.m}
 \begin{alertblock}{Importante}
 Por defecto, se grafica la función con una variación de x en el intervalo $[-2*\pi ,2*\pi ]$
 \end{alertblock}
@@ -422,21 +311,14 @@ Por defecto, se grafica la función con una variación de x en el intervalo $[-2
 
 \begin{frame}{Graficación de ecuaciones simbólicas}
 Ej. Ejecutar las siguientes líneas. Obtener conclusiones.
-\boiteviolette{
-\begin{equation*}
-y = sym('x^2-2') 
-\end{equation*}
-\begin{equation*}
-ezplot(y,[-10,10])
-\end{equation*}
-}
+\lstinputlisting[xleftmargin=.3\textwidth]{scripts/ej10.m}
 \begin{center}
 \includegraphics[scale=0.4]{images/fig3.png}
 \end{center}
 \end{frame}
 
 \begin{frame}{Graficación de ecuaciones simbólicas}
-Para graficar una ecuación paramétrica se define ecuaciones separadas para x e y en términos de una tercera variable. Luego se utiliza la función \textbf{ezplot} vista.
+\textbf{Ecuaciones paramétricas:}
 \begin{center}
 \begin{equation*}
 x = sen(t)
@@ -446,11 +328,7 @@ y = cos(t)
 \end{equation*}
 \end{center}
 Ej. Ejecutar las siguientes líneas. Obtener conclusiones.
-\boiteviolette{
-\begin{equation*}
-ezplot('sin(x)','cos(x)') 
-\end{equation*}
-}
+\lstinputlisting[xleftmargin=.3\textwidth]{scripts/ej11.m}
 \begin{center}
 \includegraphics[scale=0.3]{images/fig4.png}
 \end{center}
@@ -459,30 +337,22 @@ ezplot('sin(x)','cos(x)')
 \begin{frame}{Graficación de ecuaciones simbólicas}
 \begin{center}
 \begin{equation*}
-y_1 = sym('sen(X)') 
+y1 = sym('sen(X)') 
 \end{equation*}
 \begin{equation*}
-y_2 = sym('sen(2*X)') 
+y2 = sym('sen(2*X)') 
 \end{equation*}
 \begin{equation*}
-y_3 = sym('sen(3*X)') 
+y3 = sym('sen(3*X)') 
 \end{equation*}
 \end{center}
 Ej. Ejecutar las siguientes líneas. Obtener conclusiones.
-\boiteviolette{
-\begin{equation*}
-ezplot(y_1)
-hold on
-\end{equation*}
-}
-\begin{center}
-\includegraphics[scale=0.3]{images/fig4.png}
-\end{center}
+\lstinputlisting[xleftmargin=.4\textwidth]{scripts/ej12.m}
 \end{frame}
 
 \begin{frame}{Graficación de ecuaciones simbólicas}
 \begin{center}
-\includegraphics[scale=0.35]{images/fig5.png}
+\includegraphics[scale=0.3]{images/fig5.png}
 \end{center}
 \end{frame}
 
@@ -491,66 +361,22 @@ Se considera un auto de carreras cuya ecuación de posición es:
 \begin{equation*}
 d=20+20*sen(\frac{\pi *(t-10))}{20})
 \end{equation*}
-\begin{columns}
-\begin{column}{0.5\textwidth}
-\boiteviolette{
-\begin{equation*}
-dist = sym('20+20*sin(\pi *(t-10)/20)')
-\end{equation*}
-\begin{equation*}
-ezplot(dist,[0,20])
-\end{equation*}
-\begin{equation*}
-title('Posición del auto')
-\end{equation*}
-\begin{equation*}
-xlabel('Tiempo [s]')
-\end{equation*}
-\begin{equation*}
-ylabel('Distancia desde la línea de partida') 
-\end{equation*}
-}
-\end{column}
-\begin{column}{0.5\textwidth}
 \begin{center}
 \includegraphics[scale=0.3]{images/fig6.png}
 \end{center}
-\end{column}
-\end{columns}
 \end{frame}
 
 \begin{frame}{Cálculo: Introducción a la diferenciación}
-Sabiendo que la velocidad es la derivada de la posiócin y utilizando la función \textbf{diff}
+Sabiendo que la velocidad es la derivada de la posición y utilizando la función \textbf{diff}
 \begin{exampleblock}{Comando}
 Ver comando: diff()
 \end{exampleblock}
-Se obtiene la siguiente curva de velocidad
-\begin{columns}
-\begin{column}{0.5\textwidth}
-\boiteviolette{
-\begin{equation*}
-vel = diff(dist)
-\end{equation*}
-\begin{equation*}
-ezplot(vel,[0,20])
-\end{equation*}
-\begin{equation*}
-title('Velocidad del auto')
-\end{equation*}
-\begin{equation*}
-xlabel('Tiempo [s]')
-\end{equation*}
-\begin{equation*}
-ylabel('Velocidad del auto') 
-\end{equation*}
-}
-\end{column}
-\begin{column}{0.5\textwidth}
+\begin{center}
+Curva de velocidad
+\end{center}
 \begin{center}
 \includegraphics[scale=0.3]{images/fig7.png}
 \end{center}
-\end{column}
-\end{columns}
 \end{frame}
 
 \begin{frame}{Cálculo: Introducción a la diferenciación}
@@ -558,186 +384,100 @@ Sabiendo que la aceleración es la derivada de la velocidad y utilizando la func
 \begin{exampleblock}{Comando}
 Ver comando: diff()
 \end{exampleblock}
-Se obtiene la siguiente curva de aceleración
-\begin{columns}
-\begin{column}{0.5\textwidth}
-\boiteviolette{
-\begin{equation*}
-ace = diff(vel)
-\end{equation*}
-\begin{equation*}
-ezplot(ace,[0,20])
-\end{equation*}
-\begin{equation*}
-title('Aceleración del auto')
-\end{equation*}
-\begin{equation*}
-xlabel('Tiempo [s]')
-\end{equation*}
-\begin{equation*}
-ylabel('Aceleración del auto') 
-\end{equation*}
-}
-\end{column}
-\begin{column}{0.5\textwidth}
+\begin{center}
+Curva de aceleración
+\end{center}
 \begin{center}
 \includegraphics[scale=0.3]{images/fig8.png}
 \end{center}
-\end{column}
-\end{columns}
 \end{frame}
 
 \begin{frame}{Cálculo: Introducción a la diferenciación}
-\begin{center}
-Otras funciones de diferenciación simbólica
-\end{center}
+\textbf{Funciones de diferenciación simbólica:}
 \begin{table}[]
 \centering
 \begin{tabular}{|c|c|}
 \hline
-diff(f)       & Derivada de la expresión f con respecto a la variable independiente     \\ \hline
-diff(f,'t')   & Derivada de la expresión f con respecto a la variable t                 \\ \hline
-diff(f,n)     & Derivada n-ésima de la expresión f respecto a la variable independeinte \\ \hline
-diff(f,'t',n) & Derivada n-ésima de la expresión f respecto a la variable t             \\ \hline
+diff(f)       & Derivada de f respecto a la variable independiente     \\ \hline
+diff(f,'t')   & Derivada de f respecto a la variable t                 \\ \hline
+diff(f,n)     & Derivada n-ésima de f respecto a la variable independeinte \\ \hline
+diff(f,'t',n) & Derivada n-ésima de f respecto a la variable t             \\ \hline
 \end{tabular}
 \end{table}
 \end{frame}
 
-\begin{frame}{Ejercicio práctico xxx}
+\begin{frame}{Ejercicio práctico 20}
 \begin{enumerate}
 \item Encuentre la primera derivada con respecto a x de las siguientes expresiones:
 \begin{enumerate}
 \item $x^2+x+1$
 \item $sen(x)$
-\item $tan(X)$
-\item $ln(x)$
 \end{enumerate}
 \item Encuentre la primera derivada parcial con respecto a x de las siguientes expresiones:
 \begin{enumerate}
-\item $a*X+b*x+c$
-\item $x^0.5 -3*y$
-\item $tan(x+y)$
+\item $x^{0.5 }-3*y$
 \item $3*x+4*y-3*x*y$
 \end{enumerate}
 \item Encuentre la segunda derivada con respecto a x para cada una de las expresiones del problema 1 y 2.
 \item Encuentre la primera derivada con respecto a y para las siguientes expresiones:
 \begin{enumerate}
 \item $y-1$
-\item $2*y+3*x^2$
 \item $a*y+b*x+c*z$
 \end{enumerate}
 \end{enumerate}
 \end{frame}
 
 \begin{frame}{Cálculo: Introducción a la integración}
-Dada la curva de aceleración vista, se procede a calcular la velocidad integrando la misma. 
+Dada la curva de aceleración se procede a calcular la velocidad integrando la misma. 
 \begin{exampleblock}{Comando}
 Ver comando: int()
 \end{exampleblock}
-Se obtiene la siguiente curva de velocidad
-\begin{columns}
-\begin{column}{0.5\textwidth}
-\boiteviolette{
-\begin{equation*}
-vel = int(ace)
-\end{equation*}
-\begin{equation*}
-ezplot(vel,[0,20])
-\end{equation*}
-\begin{equation*}
-title('Velocidad del auto')
-\end{equation*}
-\begin{equation*}
-xlabel('Tiempo [s]')
-\end{equation*}
-\begin{equation*}
-ylabel('Velocidad del auto') 
-\end{equation*}
-}
-\end{column}
-\begin{column}{0.5\textwidth}
+\begin{center}
+Curva de velocidad
+\end{center}
 \begin{center}
 \includegraphics[scale=0.3]{images/fig9.png}
 \end{center}
-\end{column}
-\end{columns}
 \end{frame}
 
 \begin{frame}{Cálculo: Introducción a la integración}
-Si se desea calcular la integral definida se debe especificar el rango de interés. Algunas funciones para el cálculo de integral numérica son:
+\textbf{Cálculo de integral definida:}
 \begin{table}[]
 \centering
 \begin{tabular}{|c|c|}
 \hline
-int(f)     & Integral de la expresión f con respecto a la variable independiente                                                                      \\ \hline
-int(f,'t') & Integral de la expresión f con respecto a la variable t                                                                                  \\ \hline
-int(f,a,b) & \begin{tabular}[c]{@{}c@{}}Integral con respecto a la variable independiente de la expresión f \\ entre las fronteras a y b\end{tabular} \\ \hline
+int(f)     & Integral de f respecto a la variable independiente                                                                      \\ \hline
+int(f,'t') & Integral de f respecto a la variable t                                                                                  \\ \hline
+int(f,a,b) & \begin{tabular}[c]{@{}c@{}}Integral respecto a la variable independiente de f entre a y b\end{tabular} \\ \hline
 \end{tabular}
 \end{table}
 \end{frame}
 
-\begin{frame}{Ejercicio práctico xxx}
+\begin{frame}{Ejercicio práctico 21}
 \begin{enumerate}
 \item Integre las siguientes expresiones con respecto a x:
 \begin{enumerate}
 \item $x^2+x+1$
-\item $sen(x)$
 \item $tan(X)$
-\item $ln(x)$
 \end{enumerate}
 \item Integre las siguientes expresiones con respecto a x:
 \begin{enumerate}
-\item $a*X+b*x+c$
-\item $x^0.5 -3*y$
-\item $tan(x+y)$
+\item $x^{0.5 }-3*y$
 \item $3*x+4*y-3*x*y$
 \end{enumerate}
 \item Realice una integración doble con respecto a x para cada una de las expresiones de los problemas 1 y 2.
 \item Integre las siguientes expresiones con respecto a y:
 \begin{enumerate}
 \item $y-1$
-\item $2*y+3*x^2$
 \item $a*y+b*x+c*z$
 \end{enumerate}
 \end{enumerate}
 \end{frame}
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% Sección de consultas
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{Consultas}
-\begin{frame}{Consultas}
+\begin{frame}{Ejercicio práctico 21}
 \begin{center}
-\includegraphics[scale=0.3]{images/consultas.png}
+\includegraphics[scale=0.4]{images/img41.png}
 \end{center}
-\end{frame}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% Sección de bibliografía
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{Bibliografia}
-
-\begin{frame}{Bibliografía}
-\begin{columns}
-\begin{column}{0.5\textwidth}
-\begin{center}
-\includegraphics[scale=0.4]{images/biblio1.png}
-\end{center}
-\end{column}
-\begin{column}{0.5\textwidth}
-\begin{center}
-\includegraphics[scale=0.5]{images/biblio2.png}
-\end{center}
-\end{column}
-\end{columns}
 \end{frame}
 
 \end{document}

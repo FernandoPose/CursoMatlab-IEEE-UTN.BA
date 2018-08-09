@@ -297,3 +297,25 @@ leftskip=.3cm,rightskip=.3cm plus1fil]{subsection in head/foot}
 \end{center}
 }
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Lenguajes de programación
+\usepackage{color}
+	\definecolor{mygreen}{RGB}{28,172,0} % color values Red, Green, Blue
+	\definecolor{mylilas}{RGB}{170,55,241}
+\usepackage{listings}
+	\lstset{
+	language		= Matlab,
+	keywordstyle	= \color{blue},
+	breaklines		= true,
+	keywordstyle	= \color{blue},%
+	identifierstyle	= \color{black},%
+	stringstyle		= \color{mylilas},
+	commentstyle	= \color{mygreen},%
+	showspaces		= false,
+	showstringspaces= false,
+	numbers			= none,%
+	numberstyle		= {\tiny \color{black}},% size of the numbers
+	numbersep		= 11pt
+	}
+
+
+

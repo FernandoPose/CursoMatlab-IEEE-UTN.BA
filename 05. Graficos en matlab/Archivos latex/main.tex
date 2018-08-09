@@ -38,11 +38,7 @@
 
 \begin{frame}{Primeros Conceptos}
 Ej. Ejecute el siguiente código. Obtener conclusiones.
-\begin{center}
-x = [0:2:18];\\
-y = [0,0.33,4.13,6.29,6.85,11.19,13.19,13.96,13.33,18.17]\\
-plot(x,y)\\
-\end{center}
+\lstinputlisting[xleftmargin=.1\textwidth]{scripts/ej1.m}
 \begin{exampleblock}{Comando}
 Ver comando: \textbf{plot(x,y)}
 \end{exampleblock}
@@ -71,12 +67,7 @@ Ver comando: \textbf{grid on / grid off}
 
 \begin{frame}{Títulos, etiquetas y grilla}
 Ej. Ejecute el siguiente código. Obtener conclusiones.
-\begin{center}
-x = [0:2:18];\\
-y = [0,0.33,4.13,6.29,6.85,11.19,13.19,13.96,13.33,18.17]\\
-plot(x,y); title('Primera gráfica');\\
-xlabel('Tiempo[s]'); ylabel('Magnitud[u]'); grid on\\
-\end{center}
+\lstinputlisting[xleftmargin=.1\textwidth]{scripts/ej2.m}
 \end{frame}
 
 \begin{frame}{Títulos, etiquetas y grilla}
@@ -93,31 +84,20 @@ Se debe crear una gráfica antes de agregarle título y etiquetas. Si primero se
 
 \begin{frame}{Gráficos múltiples}
 Ej. Ejecute el siguiente código. Obtener conclusiones.
-\begin{center}
-x = [0:2:18];\\
-y = [0,0.33,4.13,6.29,6.85,11.19,13.19,13.96,13.33,18.17]\\
-plot(x,y);
-x = [0:2:18];\\
-y = [0,0.33,4.13,6.29,6.85,11.19,13.19,13.96,13.33,18.17]\\
-plot(y,x);
-\end{center}
+\lstinputlisting[xleftmargin=.1\textwidth]{scripts/ej3.m}
+\end{frame}
+
+\begin{frame}{Gráficos múltiples}
+Ej. Ejecute el siguiente código. Obtener conclusiones.
+\lstinputlisting[xleftmargin=.1\textwidth]{scripts/ej3.m}
 \begin{exampleblock}{Comando}
-Ver comando: \textbf{figure(numero)}
+Ver comandos:\\ \textbf{figure(numero)}\\ \textbf{figure('name','figura de ejemplo')}
 \end{exampleblock}
 \end{frame}
 
 \begin{frame}{Gráficos múltiples}
 Ej. Ejecute el siguiente código. Obtener conclusiones.
-\begin{center}
-x = [0:2:18];\\
-y = [0,0.33,4.13,6.29,6.85,11.19,13.19,13.96,13.33,18.17]\\
-plot(x,y); \\
-hold on
-x = [0:2:18];\\
-y = [0,0.33,4.13,6.29,6.85,11.19,13.19,13.96,13.33,18.17]\\
-plot(y,x);
-hold off
-\end{center}
+\lstinputlisting[xleftmargin=.1\textwidth]{scripts/ej4.m}
 \begin{exampleblock}{Comando}
 Ver comando: \textbf{hold on / hold off}
 \end{exampleblock}
@@ -237,11 +217,7 @@ Ver comando: \textbf{subplot(Mfilas,Ncolumnas,posición)}
 
 \begin{frame}{Subgráficas}
 Ej. Ejecutar las siguiente líneas. Obtener conclusiones.
-\boiteviolette{
-x = 0:pi/20:2*pi;\\
-subplot(2,1,1); plot(x,sin(x));\\
-subplot(2,1,2); plot(x,cos(x));
-}
+\lstinputlisting[xleftmargin=.2\textwidth]{scripts/ej5.m}
 \end{frame}
 
 \begin{frame}{Subgráficas}
@@ -252,12 +228,7 @@ subplot(2,1,2); plot(x,cos(x));
 
 \begin{frame}{Subgráficas}
 Ej. Ejecutar las siguiente líneas. Obtener conclusiones.
-\boiteviolette{
-x = 0:pi/20:2*pi;\\
-subplot(2,2,1); plot(x,sin(x));\\
-subplot(2,2,2); plot(x,cos(x));\\
-subplot(2,2,[3,4]); plot(x,sin(2*x));
-}
+\lstinputlisting[xleftmargin=.2\textwidth]{scripts/ej6.m}
 \end{frame}
 
 \begin{frame}{Subgráficas}
@@ -305,13 +276,7 @@ Ver comando: \textbf{polar(theta,r)}
 \end{exampleblock}
 \begin{columns}
 \begin{column}{0.5\textwidth}
-\begin{center}
-\boiteviolette{
-x = 0:pi/100:pi;\\
-y = sin(x);\\
-polar(x,y);
-}
-\end{center}
+\lstinputlisting[xleftmargin=.2\textwidth]{scripts/ej7.m}
 \end{column}
 \begin{column}{0.5\textwidth}
 \begin{center}
@@ -330,14 +295,7 @@ Ver comando: \textbf{$loglog(x,y)$}
 \end{exampleblock}
 \begin{columns}
 \begin{column}{0.5\textwidth}
-\begin{center}
-\boiteviolette{
-$x = 0:0.5:50;$\\
-$y = 5*x.^2;$\\
-$loglog(x,y)$
-$grid on$;
-}
-\end{center}
+\lstinputlisting[xleftmargin=.2\textwidth]{scripts/ej8.m}
 \end{column}
 \begin{column}{0.5\textwidth}
 \begin{center}
@@ -364,13 +322,7 @@ Ver comando: \textbf{$bar3(x)$}\\
 \end{exampleblock}
 \begin{columns}
 \begin{column}{0.5\textwidth}
-\begin{center}
-\boiteviolette{
-x=[1,2,5,4,8];\\
-subplot(1,2,1); bar(x);\\
-subplot(1,2,2); bar3(x);
-}
-\end{center}
+\lstinputlisting[xleftmargin=.2\textwidth]{scripts/ej9.m}
 \end{column}
 \begin{column}{0.5\textwidth}
 \begin{center}
@@ -397,13 +349,7 @@ Ver comando: \textbf{$pie3(x)$}\\
 \end{exampleblock}
 \begin{columns}
 \begin{column}{0.5\textwidth}
-\begin{center}
-\boiteviolette{
-x=[1,2,5,4,8];\\
-subplot(1,2,1); pie(x);\\
-subplot(1,2,2); pie3(x);
-}
-\end{center}
+\lstinputlisting[xleftmargin=.2\textwidth]{scripts/ej10.m}
 \end{column}
 \begin{column}{0.5\textwidth}
 \begin{center}
@@ -420,12 +366,7 @@ Ver comando: \textbf{hist(x)}
 \end{exampleblock}
 \begin{columns}
 \begin{column}{0.5\textwidth}
-\begin{center}
-\boiteviolette{
-x=[1,2,1,5,5,4,5,8];
-hist(x)
-}
-\end{center}
+\lstinputlisting[xleftmargin=.2\textwidth]{scripts/ej11.m}
 \end{column}
 \begin{column}{0.5\textwidth}
 \begin{center}
@@ -453,56 +394,11 @@ Ver comando: \textbf{errorbar(x,y,e)}
 \end{exampleblock}
 \begin{columns}
 \begin{column}{0.5\textwidth}
-\begin{center}
-\boiteviolette{
-x=0:pi/100:pi;\\
-y = sin(x);\\
-e = rand(size(x))/10;\\
-errorbar(x,y,e)
-}
-\end{center}
+\lstinputlisting[xleftmargin=.2\textwidth]{scripts/ej12.m}
 \end{column}
 \begin{column}{0.5\textwidth}
 \begin{center}
 \includegraphics[scale=0.2]{images/pantalla27.png}
-\end{center}
-\end{column}
-\end{columns}
-\end{frame}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% Sección de consultas
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{Consultas}
-\begin{frame}{Consultas}
-\begin{center}
-\includegraphics[scale=0.3]{images/consultas.png}
-\end{center}
-\end{frame}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% Sección de bibliografía
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{Bibliografia}
-
-\begin{frame}{Bibliografía}
-\begin{columns}
-\begin{column}{0.5\textwidth}
-\begin{center}
-\includegraphics[scale=0.4]{images/biblio1.png}
-\end{center}
-\end{column}
-\begin{column}{0.5\textwidth}
-\begin{center}
-\includegraphics[scale=0.5]{images/biblio2.png}
 \end{center}
 \end{column}
 \end{columns}

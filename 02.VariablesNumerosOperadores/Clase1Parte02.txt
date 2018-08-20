@@ -1,0 +1,9 @@
+# Clase 1. Parte 02- Curso Introducción a Matlab
+
+# TEMARIO:
+
+1) Variables
+2) Variables vectoriales
+3) Matrices
+4) Variable carácter
+5) Números

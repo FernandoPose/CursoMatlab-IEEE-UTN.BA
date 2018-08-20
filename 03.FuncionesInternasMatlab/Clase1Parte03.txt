@@ -1,0 +1,9 @@
+# Clase 1. Parte 03- Curso Introducción a Matlab
+
+# TEMARIO:
+
+1) Funciones matemáticas elementales
+2) Funciones trigonométricas
+3) Funciones estadísticas
+4) Máximos y mínimos
+5) Funciones de Tamaño

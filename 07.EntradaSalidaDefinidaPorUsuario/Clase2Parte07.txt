@@ -1,0 +1,8 @@
+# Clase 2. Parte 07 - Curso Introducción a Matlab
+
+# TEMARIO:
+
+1) Introducción
+2) Entrada definida por el usuario
+3) Opciones de salida
+4) Salida formateada

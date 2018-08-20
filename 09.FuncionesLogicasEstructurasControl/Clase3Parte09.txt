@@ -1,0 +1,12 @@
+# Clase 3. Parte 09 - Curso Introducción a Matlab
+
+# TEMARIO:
+
+1) Operadores relacionales
+2) Operadores lógicos
+3) Estructura de selección: if y if/else
+4) Estructura de selección: switch/case
+5) Menu
+6) Estructura de repetición: for
+7) Estructura de repetición: while
+8) break y continue

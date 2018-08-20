@@ -1,0 +1,10 @@
+# Clase 2. Parte 06- Curso Introducción a Matlab
+
+# TEMARIO:
+
+1) Introducción
+2) Funciones con entrada y salida múltiple
+3) Funciones sin entrada o salida
+4) Variables locales y globales
+
+

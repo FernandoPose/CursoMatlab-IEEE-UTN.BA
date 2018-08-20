@@ -1,0 +1,5 @@
+# Clase 2. Parte 04- Curso Introducción a Matlab
+
+# TEMARIO:
+
+1) Tipo de operaciones

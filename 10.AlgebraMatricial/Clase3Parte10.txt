@@ -1,0 +1,11 @@
+# Clase 3. Parte 10 - Curso Introducción a Matlab
+
+# TEMARIO:
+
+1) Transpuesta
+2) Producto punto
+3) Multiplicación matricial
+4) Potencia de matrices
+5) Inversión de matriz
+6) Determinantes
+7) Matrices especiales

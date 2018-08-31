@@ -1,0 +1,1 @@
+[nom,tipo,edad,est]=textread('personas.dat','%s %s %f %s',-1)

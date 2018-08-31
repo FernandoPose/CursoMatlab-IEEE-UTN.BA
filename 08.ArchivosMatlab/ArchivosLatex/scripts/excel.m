@@ -1,0 +1,1 @@
+datos=xlsread('datos.xls');

@@ -1,0 +1,1 @@
+variable = textread('texto.txt') ;

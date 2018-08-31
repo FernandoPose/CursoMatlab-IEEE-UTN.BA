@@ -1,11 +1,13 @@
 \documentclass{bredelebeamer}
-
+\usepackage{framed}
+\usepackage{color}
+\usepackage{wrapfig}\definecolor{shadecolor}{RGB}{255,0,0}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \title[Programación en MatLAB]{Introducción a la programación con MatLAB}
 \subtitle{Módulo 08 - Archivos en matlab}
 
-\author{Autor1 - Autor2 - Autor3\inst{1}}
+\author{Agustín - Andrés - Gabriel - Fernando\inst{1}}
 \institute[UTN.BA]
 {
   \inst{1}%
@@ -13,7 +15,7 @@
   Facultad Regional Buenos Aires
   }
 
-\date{dia mes 2018}
+\date{2018}
 
 \subject{Taller de programación}
 
@@ -42,11 +44,10 @@ Los datos se almacenan en muchos formatos diferentes. Algunos ejemplos podrían 
 \item Imagen: archivos .jpg
 \item Tablas de excel: .xls
 \end{itemize}
-Para conocer los formatos admitidos por MATLAB escribir \textbf{doc fileformats} en la ventana de comandos.
+Para conocer los formatos admitidos por MATLAB escribir \textbf{doc fileformats} en la ventana de comandos. Aunque para nuevas opciones se recomienda recurrir a la web de \textbf{Mathworks}.
 \end{frame}
 
 \begin{frame}{Tipos de archivo soportados por Matlab}
-Matlab soporta los siguientes tipos de archivo de datos
 \begin{table}[]
 \centering
 \begin{tabular}{|c|c|c|}
@@ -56,22 +57,52 @@ Texto                                                                           
 \begin{tabular}[c]{@{}c@{}}Formatos comunes \\ de datos científicos\end{tabular} & \begin{tabular}[c]{@{}c@{}}.cdf\\ .fits\\ .hdf\end{tabular}       & \begin{tabular}[c]{@{}c@{}}Datos comunes\\ Transporte de imágenes\\ Datos jerárquicos\end{tabular}                      \\ \hline
 Datos de hoja de cálculo                                                         & \begin{tabular}[c]{@{}c@{}}.xls\\ .wk1\\ .tiff\end{tabular}       & \begin{tabular}[c]{@{}c@{}}Hoja de cálculo Excel\\ Lotus 123\\ Archivo de imagen etiquetado\end{tabular}                \\ \hline
 Datos de imágen                                                                  & \begin{tabular}[c]{@{}c@{}}.bmp\\ .jpeg o jpg\\ .gif\end{tabular} & \begin{tabular}[c]{@{}c@{}}Mapa de bits\\ Grupo experto fotográfico unido\\ Formato de intercambio gráfico\end{tabular} \\ \hline
-Datos de audio                                                                   & \begin{tabular}[c]{@{}c@{}}.au\\ .wav\end{tabular}                & \begin{tabular}[c]{@{}c@{}}Audio\\ Archivo wave Microsoft\end{tabular}                                                  \\ \hline
+Datos de audio                                                                   & \begin{tabular}[c]{@{}c@{}}.au\\ .wav\\.flac\end{tabular}                & \begin{tabular}[c]{@{}c@{}}Audio\\ Archivo wave Microsoft\\ Free Lossless Audio Codec\end{tabular}  
+\\ \hline
 Película                                                                         & .avi                                                              & Archivo intercalado audio/video                                                                                         \\ \hline
 \end{tabular}
 \end{table}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\begin{frame}{Archivos disponibles}
+
+\begin{block}{Utilidad}
+Puedo conocer los archivos del directorio desde un script.
+\end{block}
+
+\lstinputlisting[xleftmargin=.3\textwidth]{scripts/dir.m}
+
+\end{frame}
+
+\begin{frame}{Archivos disponibles}
+
+pero... ¿cómo accedo a esa información?
+\begin{center}
+\includegraphics[scale=0.3]{images/krusty}
+
+\end{center}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Importación de datos}
 Conociendo el tipo de formato a importar puede utilizar una función de importación. Por ejemplo:
-\boiteviolette{
-[data,fs] = wavread('ArrozConLeche.wav');
-}
+
+\begin{center}
+\lstinputlisting[xleftmargin=.2\textwidth]{scripts/audioread.m}
+\end{center}
 Lee la canción \textit{ArrozConLeche}\\
-\begin{block}{Tener en cuenta}
-\textbf{doc fileformats} muestra una lista de funciones de importación según el formato del archivo a importar.
+\begin{block}{para esta función}
+\textbf{audioread} soporta archivos:WAVE (.wav),
+OGG (.ogg),
+FLAC (.flac),
+AU (.au),
+AIFF (.aiff, .aif),
+AIFC (.aifc) y en versiones recientes incluye MP3.
 \end{block}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}{Cargar datos desde un archivo ASCII}
 \begin{itemize}
@@ -93,11 +124,12 @@ Un ejemplo de archivo \textbf{text.txt} puede ser:
 Ver comando: \textbf{load()}
 \end{exampleblock}
 Para cargar el archivo \textit{texto.txt} se escribe:\\
-\boiteviolette{
-variable = load(’texto.txt’);
-}
+\begin{center}
+\lstinputlisting[xleftmargin=.25\textwidth]{scripts/load.m}
+\end{center}
 \end{frame}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Función textread}
 \begin{itemize}
 \item Lee string y datos numéricos desde un archivo utilizando especificadores de conversión.
@@ -116,14 +148,22 @@ Un ejemplo de archivo \textbf{text.txt} puede ser:
 \end{tabular}
 \end{table}
 \begin{exampleblock}{Comando}
-Ver comando: \textbf{textread()}
+\lstinputlisting[xleftmargin=.25\textwidth]{scripts/textread.m}
 \end{exampleblock}
-Para cargar el archivo \textit{texto.txt} se escribe:\\
-\boiteviolette{
-variable = textread(’texto.txt’);
-}
+
 \end{frame}
 
+\begin{frame}{archivo de texto}
+\begin{exampleblock}{Comando}
+escribir el siguiente archivo y leerlo:\\
+Hola, soy un txt.
+\end{exampleblock}
+\begin{center}
+\includegraphics[scale=0.6]{images/Fry}
+\end{center}
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Función textread}
 Para leer un archivo \textbf{.dat}. Por ejemplo:
 \begin{table}[]
@@ -143,10 +183,11 @@ N es el número de filas que se deseen leer. El valor -1 permite leer todo el ar
 \end{center}
 \end{block}
 Para cargar el archivo \textit{personas.dat} se escribe:\\
-\boiteviolette{
-[nombre, tipo,edad,estado]=textread(’misdatos.dat’, ’\%s \%s \%f \%s’, -1)
-}
+\begin{center}
+\lstinputlisting[]{scripts/dat.m}
+\end{center}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}{Función dlmread}
 \begin{exampleblock}{Comando}
@@ -164,10 +205,11 @@ Ej. Leer la siguiente tabla de datos separados por \textbf{;}
 0.33;  & 9.3;   & -2;   & 3.3 
 \end{tabular}
 \end{table}
-\boiteviolette{
-datos=dlmear(’signal.dat’, ’;’);
-}
+\begin{center}
+\lstinputlisting[xleftmargin=.25\textwidth]{scripts/dlmread.m}
+\end{center}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}{Función xlsread}
 \begin{exampleblock}{Comando}
@@ -188,10 +230,11 @@ Ej. Leer la siguiente tabla de datos
 \multicolumn{1}{|c|}{0.33} & \multicolumn{1}{c|}{9.3}  & \multicolumn{1}{c|}{-2}  & \multicolumn{1}{c|}{3.3}  \\ \hline
 \end{tabular}
 \end{table}
-\boiteviolette{
-datos=xlsread(’datos.xls’)
-}
+\begin{center}
+\lstinputlisting[xleftmargin=.25\textwidth]{scripts/excel.m}
+\end{center}
 \end{frame}
+
 
 \begin{frame}{Función xlsread}
 Ej. Leer la siguiente tabla de datos
@@ -206,48 +249,55 @@ Ej. Leer la siguiente tabla de datos
 \multicolumn{1}{|c|}{0.33}   & \multicolumn{1}{c|}{9.3}    & \multicolumn{1}{c|}{-2}     & \multicolumn{1}{c|}{3.3}     \\ \hline
 \end{tabular}
 \end{table}
-\boiteviolette{
-[datos,canales]=xlsread(’datos.xls’);
-}
+\begin{center}
+\lstinputlisting[xleftmargin=.2\textwidth]{scripts/excel2.m}
+\end{center}
 \end{frame}
+
+\begin{frame}{sobre los archivos xls}
+\begin{alertblock}{Microsoft no es copado}
+El uso de las funciones dedicadas depende de la aplicación \textbf{Microsoft Excel}
+\end{alertblock}
+\begin{center}
+\includegraphics[scale=0.4]{images/bill}
+\end{center}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}{Exportación de datos}
 Se verán tres formas de exportar datos:\\
 \begin{itemize}
-\item Función save - Salva el espacio de trabajo (workspace)
-\item Función dlmwrite - Guarda un arreglo utilizando delimitadores
-\item Función xlswrite - Guarda un arreglo en una hoja de excel
+\item  save - Salva el espacio de trabajo (workspace)
+\item  dlmwrite - Guarda un arreglo utilizando delimitadores
+\item  xlswrite - Guarda un arreglo en una hoja de excel
+\item  audiowrite - Crea un archivo de audio
 \end{itemize}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}{Función save}
 \begin{exampleblock}{Comando}
-Ver comando: \textbf{save}
+Ver comando: \textbf{save} y \textbf{load}
 \end{exampleblock}
 La función \textbf{save} guarda el espacio de trabajo (workspace) en forma binaria creando un archivo .mat
-\begin{exampleblock}{Comando}
-Ver comando: \textbf{load}
-\end{exampleblock}
+
 La función \textbf{load} carga el archivo .mat recuperando el workspace salvado.
 \begin{block}{Tener en cuenta}
 \begin{center}
 Para guardar el workspace con un determinado nombre se escribe:\\
-filename = 'test.mat';\\
-save(filename);
+\begin{center}
+\lstinputlisting[xleftmargin=.3\textwidth]{scripts/save.m}
+\end{center}
 \end{center}
 \end{block}
 \end{frame}
 
 \begin{frame}{Función save}
 Ej. Ejecutar las siguientes líneas. Obtener conclusiones.
-\boiteviolette{
-A = 5;\\
-B = 6;\\
-espacio = 'espacioTrabajo';\\
-save(espacio);\\
-clear;\\
-load('espacioTrabajo.mat');
-}
+\begin{center}
+\lstinputlisting[xleftmargin=.3\textwidth]{scripts/save2.m}
+\end{center}
+
 \end{frame}
 
 \begin{frame}{Función dlmwrite}
@@ -263,17 +313,9 @@ La función \textbf{type} visualiza el archivo .txt
 
 \begin{frame}{Función dlmwrite}
 Ej. Ejecutar las siguientes líneas. Obtener conclusiones.
-\boiteviolette{
-Matriz = magic(3);\\
-dlmwrite('Archivo.txt',Matriz,'\&');\\
-type('archivo.txt');
-}
-Ej. Ejecutar las siguientes líneas. Obtener conclusiones.
-\boiteviolette{
-Matriz = magic(3);\\
-dlmwrite('Archivo.dat',Matriz,'\&');\\
-load('archivo.txt');
-}
+\begin{center}
+\lstinputlisting[xleftmargin=.25\textwidth]{scripts/dlmwrite.m}
+\end{center}
 \end{frame}
 
 \begin{frame}{Función xlswrite}
@@ -283,11 +325,22 @@ Ver comando: \textbf{xlswrite}
 La función \textbf{xlswrite} Guarda arreglo numérico o matriz en una hoja de Excel.
 
 Ej. Ejecutar las siguientes líneas. Obtener conclusiones.
-\boiteviolette{
-Archivo = 'PrimeraTabla';\\
-Matriz = [1 2 3 4 ; 5 6 7 8 ; 9 10 11 12];\\
-xlswrite(Archivo,Matriz);
-}
+\begin{center}
+\lstinputlisting[xleftmargin=.25\textwidth]{scripts/xlswrite.m}
+\end{center}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Función audioread}
+
+\begin{exampleblock}{Comando}
+Ver comando: \textbf{audiowrite}
+\end{exampleblock}
+
+Ej. Ejecutar las siguientes líneas. Obtener conclusiones.
+\begin{center}
+\lstinputlisting[xleftmargin=.25\textwidth]{scripts/audiowrite.m}
+\end{center}
+
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -310,21 +363,21 @@ xlswrite(Archivo,Matriz);
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Bibliografia}
+% \section{Bibliografia}
 
-\begin{frame}{Bibliografía}
-\begin{columns}
-\begin{column}{0.5\textwidth}
-\begin{center}
-\includegraphics[scale=0.4]{images/biblio1.png}
-\end{center}
-\end{column}
-\begin{column}{0.5\textwidth}
-\begin{center}
-\includegraphics[scale=0.5]{images/biblio2.png}
-\end{center}
-\end{column}
-\end{columns}
-\end{frame}
+% \begin{frame}{Bibliografía}
+% \begin{columns}
+% \begin{column}{0.5\textwidth}
+% \begin{center}
+% \includegraphics[scale=0.4]{images/biblio1.png}
+% \end{center}
+% \end{column}
+% \begin{column}{0.5\textwidth}
+% \begin{center}
+% \includegraphics[scale=0.5]{images/biblio2.png}
+% \end{center}
+% \end{column}
+% \end{columns}
+% \end{frame}
 
 \end{document}

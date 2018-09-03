@@ -1,21 +1,18 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                                         %
-% Ejercicio Integrador 1. Máximos y Mínimos de una señal                  %
+% Ejercicio Integrador 1. Mï¿½ximos y Mï¿½nimos de una seï¿½al                  %
 %                                                                         %
 % Ejercicio Integrador#1                                                  %
 %                                                                         %
-% IEEE Sección Argentina UTN.BA                                           %
+% IEEE Secciï¿½n Argentina                                                  %
 %                                                                         %
-% Facultad Regional Buenos Aires                                          %
-% Universidad Tecnológica Nacional                                        %
-% Período Lectivo 2018                                                    %
 %                                                                         %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%% Enunciado %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                                         %
-%   Graficar la señal contenida en ecg.mat, luego obtenga y grafique los  %
-%   máximos y mínimos de la señal en un mismo gráfico junto a la señal    %
+%   Graficar la seï¿½al contenida en ecg.mat, luego obtenga y grafique los  %
+%   mï¿½ximos y mï¿½nimos de la seï¿½al en un mismo grï¿½fico junto a la seï¿½al    %
 %   cargada.                                                              %
 %                                                                         %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -26,48 +23,48 @@ clc; clear all; close all;          % Limpio el Workspace, el Command Window.
 
 
 %% Cargo el Workspace guardado
-load('ecg.mat');                    % Cargo la señal a calcular máximos y mínimos
+load('ecg.mat');                    % Cargo la seï¿½al a calcular mï¿½ximos y mï¿½nimos
 
 
 
 %% Defino variables del test
 %Numero de muestras
-N =                                 % Número de muestras (valores que tiene la señal)
+N =                                 % Nï¿½mero de muestras (valores que tiene la seï¿½al)
 fs = 250;                           % Frecuencia de muestreo (tiempo de toma de puntos)
 
 
 
-%% Defino vectores temporales 
+%% Defino vectores temporales
 t = 0:1/fs:(N-1)*1/fs;              % Eje temporal (Eje x)
 
 
 
-%% Item A (Grafico de la señal contenida en el Workspace)
+%% Item A (Grafico de la seï¿½al contenida en el Workspace)
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % AYUDA: Graficar para: t = 0 a (N-1)*1/fs                                %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %--------------------------------------------------------------------------
-% Gráfico de la señal: amp = ecg(t):
-% ACÁ CODIGO
+% Grï¿½fico de la seï¿½al: amp = ecg(t):
+% ACï¿½ CODIGO
 %--------------------------------------------------------------------------
 
 
 
 %% Procesamiento
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% AYUDA: Ver función: findpeaks()  Utilizar mínima distancia              %
+% AYUDA: Ver funciï¿½n: findpeaks()  Utilizar mï¿½nima distancia              %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %--------------------------------------------------------------------------
-% Obtener los máximos de la señal:
-% ACÁ CODIGO
+% Obtener los mï¿½ximos de la seï¿½al:
+% ACï¿½ CODIGO
 %--------------------------------------------------------------------------
 
 %--------------------------------------------------------------------------
-% Obtener los mínimos de la señal:
-% ACÁ CODIGO
+% Obtener los mï¿½nimos de la seï¿½al:
+% ACï¿½ CODIGO
 %--------------------------------------------------------------------------
 
 
@@ -75,13 +72,13 @@ t = 0:1/fs:(N-1)*1/fs;              % Eje temporal (Eje x)
 %% Resultados
 
 %--------------------------------------------------------------------------
-% Gráfico de puntos máximos:
-% ACÁ CODIGO
+% Grï¿½fico de puntos mï¿½ximos:
+% ACï¿½ CODIGO
 %--------------------------------------------------------------------------
 
 %--------------------------------------------------------------------------
-% Gráfico de puntos mínimos:
-% ACÁ CODIGO
+% Grï¿½fico de puntos mï¿½nimos:
+% ACï¿½ CODIGO
 %--------------------------------------------------------------------------
 
 % HACER PUBLISH ;)

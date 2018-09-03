@@ -1,36 +1,31 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                                         %
-% Unidad 9. Introducción a la programación con MatLAB                     %
+% Unidad 9. Introducciï¿½n a la programaciï¿½n con MatLAB                     %
 %                                                                         %
 % Ejercicio#12 - Item A                                                   %
 %                                                                         %
-% IEEE Sección Argentina UTN.BA                                           %
+% IEEE Secciï¿½n Argentina                                                  %
 %                                                                         %
-% Facultad Regional Buenos Aires                                          %
-% Universidad Tecnológica Nacional                                        %
-% Período Lectivo 2018                                                    %
 %                                                                         %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 clear;
 clc;
 
-year = input('Ingrese su año en la escuela: ','spr');
+year = input('Ingrese su aï¿½o en la escuela: ','spr');
 
 switch year
-    
+
     case 'primero'
         dia = 'Lunes';
     case 'segundo'
         dia = 'Martes';
     case 'tercero'
-        dia = 'Miércoles';
+        dia = 'Miï¿½rcoles';
     case 'cuarto'
         dia = 'Jueves';
     otherwise
-        dia = 'Día no cargado';
+        dia = 'Dï¿½a no cargado';
 end
 
-disp(['El final es el día: ' dia])
-
-
+disp(['El final es el dï¿½a: ' dia])

@@ -1,27 +1,24 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                                         %
-% Unidad 2. Introducción a la programación con MatLAB                     %
+% Unidad 2. Introducciï¿½n a la programaciï¿½n con MatLAB                     %
 %                                                                         %
 % Ejercicio#1                                                             %
 %                                                                         %
-% IEEE Sección Argentina UTN.BA                                           %
+% IEEE Secciï¿½n Argentina UTN.BA                                           %
 %                                                                         %
-% Facultad Regional Buenos Aires                                          %
-% Universidad Tecnológica Nacional                                        %
-% Período Lectivo 2018                                                    %
 %                                                                         %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 clear
 clc
 
-%% Item 1 - Declaración de números complejos
+%% Item 1 - Declaraciï¿½n de nï¿½meros complejos
 
 A = 1 + i;
 B = 2 - 3i;
 C = 8 + 2i;
 
-%% Item 2 - Declaración de un vector de componentes complejas
+%% Item 2 - Declaraciï¿½n de un vector de componentes complejas
 
 D = [2-3i 4+8i 6-16i];
 
@@ -30,13 +27,13 @@ D = [2-3i 4+8i 6-16i];
 % realD = [2 4 6];
 % D = complex(realD,imagD);
 
-%% Item 3 - Cálculo de valor absoluto 
+%% Item 3 - Cï¿½lculo de valor absoluto
 
 Mod_A = abs(A);
 Mod_B = abs(B);
 Mod_C = abs(C);
 
-%% Item 4 - Cálculo de valor de ángulo
+%% Item 4 - Cï¿½lculo de valor de ï¿½ngulo
 
 Ang_A = angle(A);
 Ang_B = angle(B);
@@ -46,7 +43,7 @@ Ang_C = angle(C);
 
 ConjD = conj(D);
 
-%% Item 6 - Cálculo de transpuesta
+%% Item 6 - Cï¿½lculo de transpuesta
 
 D_trans = D';
 

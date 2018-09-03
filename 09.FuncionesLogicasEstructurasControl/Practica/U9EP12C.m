@@ -1,21 +1,18 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                                         %
-% Unidad 9. Introducción a la programación con MatLAB                     %
+% Unidad 9. Introducciï¿½n a la programaciï¿½n con MatLAB                     %
 %                                                                         %
 % Ejercicio#12 - Item C                                                   %
 %                                                                         %
-% IEEE Sección Argentina UTN.BA                                           %
+% IEEE Secciï¿½n Argentina                                                  %
 %                                                                         %
-% Facultad Regional Buenos Aires                                          %
-% Universidad Tecnológica Nacional                                        %
-% Período Lectivo 2018                                                    %
 %                                                                         %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 clear;
 clc;
 
-cant = input('Cuántas barras de dulce quiere comprar?');
+cant = input('Cuï¿½ntas barras de dulce quiere comprar?');
 
 switch cant
     case 1
@@ -29,9 +26,3 @@ switch cant
 end
 
 fprintf('Debe abonar %.2f \n',precio);
-
-
-
-
-
-

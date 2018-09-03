@@ -1,42 +1,37 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                                         %
-% Unidad 3. Introducción a la programación con MatLAB                     %
+% Unidad 3. Introducciï¿½n a la programaciï¿½n con MatLAB                     %
 %                                                                         %
 % Ejercicio#3                                                             %
 %                                                                         %
-% IEEE Sección Argentina UTN.BA                                           %
+% IEEE Secciï¿½n Argentina                                                  %
 %                                                                         %
-% Facultad Regional Buenos Aires                                          %
-% Universidad Tecnológica Nacional                                        %
-% Período Lectivo 2018                                                    %
 %                                                                         %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 clear
 clc
 
-% Declaración del vector
+% Declaraciï¿½n del vector
 
 x = [4,90,85,75 ; 2,55,65,75 ; 3,78,82,79 ; 1,84,92,93];
 
-%% Item 1 - Cálculo de máximo (columna)
+%% Item 1 - Cï¿½lculo de mï¿½ximo (columna)
 
 ValC_Max = max(x);
 
-%% Item 2 - Cálculo de máximo y fila (columna)
+%% Item 2 - Cï¿½lculo de mï¿½ximo y fila (columna)
 
 [maxC nFilaC] = max(x);
 
-%% Item 3 - Cálculo de máximo (fila)
+%% Item 3 - Cï¿½lculo de mï¿½ximo (fila)
 
 ValF_Max = max(x');
 
-%% Item 4 - Cálculo de máximo y fila (fila)
+%% Item 4 - Cï¿½lculo de mï¿½ximo y fila (fila)
 
 [maxF nFilaF] = max(x');
 
-%% Item 5 - Cálculo del máximo de la tabla
+%% Item 5 - Cï¿½lculo del mï¿½ximo de la tabla
 
 Maximo = max(max(x));
-
-

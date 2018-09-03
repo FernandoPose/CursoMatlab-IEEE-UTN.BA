@@ -1,14 +1,11 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                                         %
-% Unidad 10. Introducción a la programación con MatLAB                    %
+% Unidad 10. Introducciï¿½n a la programaciï¿½n con MatLAB                    %
 %                                                                         %
 % Ejercicio#16 - Item B                                                   %
 %                                                                         %
-% IEEE Sección Argentina UTN.BA                                           %
+% IEEE Secciï¿½n Argentina                                                  %
 %                                                                         %
-% Facultad Regional Buenos Aires                                          %
-% Universidad Tecnológica Nacional                                        %
-% Período Lectivo 2018                                                    %
 %                                                                         %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -19,10 +16,3 @@ A = [1 2 3 4];
 B = [12 20 15 7];
 
 sum(A.*B)
-
-
-
-
-
-
-

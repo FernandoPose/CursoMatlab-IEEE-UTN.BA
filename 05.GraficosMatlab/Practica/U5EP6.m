@@ -1,33 +1,30 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                                         %
-% Unidad 5. Introducción a la programación con MatLAB                     %
+% Unidad 5. Introducciï¿½n a la programaciï¿½n con MatLAB                     %
 %                                                                         %
 % Ejercicio#6                                                             %
 %                                                                         %
-% IEEE Sección Argentina UTN.BA                                           %
+% IEEE Secciï¿½n Argentina                                                  %
 %                                                                         %
-% Facultad Regional Buenos Aires                                          %
-% Universidad Tecnológica Nacional                                        %
-% Período Lectivo 2018                                                    %
 %                                                                         %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 clear
 clc
 
-%% Item 1 - Gráfico y = sen(X)
+%% Item 1 - Grï¿½fico y = sen(X)
 
 x = 0:0.1*pi:2*pi;
 y = sin(x);
 plot(x,y);
 
-%% Item 2 - Título y etiqueta
+%% Item 2 - Tï¿½tulo y etiqueta
 
-title('Función y = sen(x)');
+title('Funciï¿½n y = sen(x)');
 xlabel('x');
 ylabel('sen(x)');
 
-%% Item 3 - Gráfico y_1 = sen(X) ; y_2 = cos(x)
+%% Item 3 - Grï¿½fico y_1 = sen(X) ; y_2 = cos(x)
 
 x = 0:0.1*pi:2*pi;
 y_1 = sin(x);
@@ -47,7 +44,7 @@ title('Funciones y_1 = sen(X) & y_2 = cos(x)');
 xlabel('x');
 ylabel('valores de y_1 e y_2');
 
-%% Item 5 - Utilización de leyendas
+%% Item 5 - Utilizaciï¿½n de leyendas
 
 legend('sen(X)','cos(x)');
 

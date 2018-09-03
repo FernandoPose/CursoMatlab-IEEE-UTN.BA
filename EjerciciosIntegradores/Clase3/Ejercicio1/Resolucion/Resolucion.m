@@ -1,21 +1,18 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                                         %
-% Ejercicio Integrador 3. Sucesión de Fibonacci                           %
+% Ejercicio Integrador 3. Sucesiï¿½n de Fibonacci                           %
 %                                                                         %
 % Ejercicio Integrador#3                                                  %
 %                                                                         %
-% IEEE Sección Argentina UTN.BA                                           %
+% IEEE Secciï¿½n Argentina                                                  %
 %                                                                         %
-% Facultad Regional Buenos Aires                                          %
-% Universidad Tecnológica Nacional                                        %
-% Período Lectivo 2018                                                    %
 %                                                                         %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%% Enunciado %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                                         %
 %   Preparar un programa que calcule y almacene en una variable los 50    %
-%   primeros términos de la sucesión                                                                      %
+%   primeros tï¿½rminos de la sucesiï¿½n                                      %
 %                                                                         %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -35,7 +32,7 @@ clc; clear all; close all;          % Limpio el Workspace, el Command Window.
 %% Procesamiento
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% AYUDA: Utilice ciclo de repetición for                                  %
+% AYUDA: Utilice ciclo de repeticiï¿½n for                                  %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %--------------------------------------------------------------------------
@@ -43,10 +40,9 @@ suc(1) = 1;
 suc(2) = 1;
 
 for i = 3:50
-   suc(i) = suc(i-2) + suc(i-1); 
+   suc(i) = suc(i-2) + suc(i-1);
 end
 %--------------------------------------------------------------------------
 
 %% Informe de resultados
-disp(['Sucesión: ' num2str(suc)]);
-
+disp(['Sucesiï¿½n: ' num2str(suc)]);

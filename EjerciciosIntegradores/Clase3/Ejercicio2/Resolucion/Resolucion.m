@@ -4,11 +4,8 @@
 %                                                                         %
 % Ejercicio Integrador#2                                                  %
 %                                                                         %
-% IEEE Sección Argentina UTN.BA                                           %
+% IEEE Secciï¿½n Argentina                                                  %
 %                                                                         %
-% Facultad Regional Buenos Aires                                          %
-% Universidad Tecnológica Nacional                                        %
-% Período Lectivo 2018                                                    %
 %                                                                         %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -29,7 +26,7 @@ disp(['El vector a ordenar es: ' num2str(x)]);
 %% Procesamiento
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% AYUDA: Utilice ciclo de repetición for y de selección if                %
+% AYUDA: Utilice ciclo de repeticiï¿½n for y de selecciï¿½n if                %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %--------------------------------------------------------------------------
@@ -46,4 +43,3 @@ end
 
 %% Informe de resultados
 disp(['El vector  ordenado es: ' num2str(x)]);
-

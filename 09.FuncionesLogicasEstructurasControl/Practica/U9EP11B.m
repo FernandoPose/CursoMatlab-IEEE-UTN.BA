@@ -1,24 +1,20 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                                         %
-% Unidad 9. Introducción a la programación con MatLAB                     %
+% Unidad 9. Introducciï¿½n a la programaciï¿½n con MatLAB                     %
 %                                                                         %
 % Ejercicio#12 - Item B                                                   %
 %                                                                         %
-% IEEE Sección Argentina UTN.BA                                           %
+% IEEE Secciï¿½n Argentina                                                  %
 %                                                                         %
-% Facultad Regional Buenos Aires                                          %
-% Universidad Tecnológica Nacional                                        %
-% Período Lectivo 2018                                                    %
 %                                                                         %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 function out = U9EP11B(tam)
 
     if (tam >= 5.3) & (tam <= 5.5)
-        out = 'Dentro de la especificación';
+        out = 'Dentro de la especificaciï¿½n';
     else
-        out = 'Fuera de la especificación';
+        out = 'Fuera de la especificaciï¿½n';
     end
-    
-end
 
+end

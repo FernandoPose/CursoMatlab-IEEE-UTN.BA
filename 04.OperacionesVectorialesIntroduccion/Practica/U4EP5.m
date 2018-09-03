@@ -1,21 +1,18 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                                         %
-% Unidad 4. Introducción a la programación con MatLAB                     %
+% Unidad 4. Introducciï¿½n a la programaciï¿½n con MatLAB                     %
 %                                                                         %
 % Ejercicio#5                                                             %
 %                                                                         %
-% IEEE Sección Argentina UTN.BA                                           %
+% IEEE Secciï¿½n Argentina                                                  %
 %                                                                         %
-% Facultad Regional Buenos Aires                                          %
-% Universidad Tecnológica Nacional                                        %
-% Período Lectivo 2018                                                    %
 %                                                                         %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 clear
 clc
 
-%% Item 1 - Definición de A
+%% Item 1 - Definiciï¿½n de A
 
 a = [2.3 5.8 9];
 
@@ -23,7 +20,7 @@ a = [2.3 5.8 9];
 
 VecRes = a + 3;
 
-%% Item 3 - Definición de B
+%% Item 3 - Definiciï¿½n de B
 
 b = [5.2 3.14 2];
 
@@ -31,7 +28,7 @@ b = [5.2 3.14 2];
 
 Sum_AB = a + b;
 
-%% Item 5 - Multiplicación elemento/elemento
+%% Item 5 - Multiplicaciï¿½n elemento/elemento
 
 Pro_AB = a.*b;
 
@@ -39,11 +36,11 @@ Pro_AB = a.*b;
 
 Cuad_A = a.^2;
 
-%% Item 7 - Definición de C
+%% Item 7 - Definiciï¿½n de C
 
 c = 0:10;
 
-%% Item 8 - Definición de D
+%% Item 8 - Definiciï¿½n de D
 
 d = 0:2:10;
 
@@ -54,4 +51,3 @@ MatLin = linspace(10,20,6);
 %% Item 10 - Matriz usando logspace
 
 MatLog = logspace(1,2,5);
-

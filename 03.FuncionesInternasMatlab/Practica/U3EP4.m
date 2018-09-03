@@ -1,25 +1,22 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                                         %
-% Unidad 3. Introducción a la programación con MatLAB                     %
+% Unidad 3. Introducciï¿½n a la programaciï¿½n con MatLAB                     %
 %                                                                         %
-% Ejercicio#4 dal                                                            %
+% Ejercicio#4                                                             %
 %                                                                         %
-% IEEE Sección Argentina UTN.BA                                           %
+% IEEE Secciï¿½n Argentina                                                  %
 %                                                                         %
-% Facultad Regional Buenos Aires                                          %
-% Universidad Tecnológica Nacional                                        %
-% Período Lectivo 2018                                                    %
 %                                                                         %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 clear
 clc
 
-% Declaración del vector
+% Declaraciï¿½n del vector
 
 x = [4,90,85,75 ; 2,55,65,75 ; 3,78,82,79 ; 1,84,92,93];
 
-%% Item 1 - Cálculo de filas y columnas
+%% Item 1 - Cï¿½lculo de filas y columnas
 
 [fila columna] = size(x);
 
@@ -30,7 +27,3 @@ xASC = sort(x);
 %% Item 3 - Ordenamiento (descendente)
 
 xDES = sort(x,'descend');
-
-
-
-

@@ -1,18 +1,18 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                                         %
-% Unidad 9. Introducci�n a la programaci�n con MatLAB                     %
+% Unidad 9. Introduccion a la programacion con MatLAB                     %
 %                                                                         %
 % Ejercicio#12 - Item C                                                   %
 %                                                                         %
-% IEEE Secci�n Argentina                                                  %
-%                                                                         %
+% IEEE Seccion Argentina - Rama Estudiantil UTN.BA                        %
+% Realizada en 2018                                                       %
 %                                                                         %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 clear;
 clc;
 
-cant = input('Cu�ntas barras de dulce quiere comprar?');
+cant = input('Cuantas barras de dulce quiere comprar?');
 
 switch cant
     case 1

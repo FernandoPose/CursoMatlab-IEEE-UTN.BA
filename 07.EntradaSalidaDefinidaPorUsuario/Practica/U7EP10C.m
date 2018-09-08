@@ -1,11 +1,11 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                                         %
-% Unidad 7. Introducci�n a la programaci�n con MatLAB                     %
+% Unidad 7. Introduccion a la programacion con MatLAB                     %
 %                                                                         %
 % Ejercicio#10 - Item C                                                   %
 %                                                                         %
-% IEEE Secci�n Argentina                                                  %
-%                                                                         %
+% IEEE Seccion Argentina - Rama Estudiantil UTN.BA                        %
+% Realizada en 2018                                                       %
 %                                                                         %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

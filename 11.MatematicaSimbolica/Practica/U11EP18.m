@@ -1,23 +1,21 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                                         %
-% Unidad 11. Introducción a la programación con MatLAB                    %
+% Unidad 11. Introduccion a la programacion con MatLAB                    %
 %                                                                         %
 % Ejercicio#18                                                            %
 %                                                                         %
-% IEEE Sección Argentina UTN.BA                                           %
-%                                                                         %
-% Facultad Regional Buenos Aires                                          %
-% Universidad Tecnológica Nacional                                        %
-% Período Lectivo 2018                                                    %
+% IEEE Seccion Argentina - Rama Estudiantil UTN.BA                        %
+% Realizada en 2018                                                       %
 %                                                                         %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 clear;
 clc;
 
 %% Item A
 
-syms x; % También puede ser: x = sym('x')
+syms x; % Tambien puede ser: x = sym('x')
 
 %% Item B
 
@@ -48,4 +46,3 @@ Factor_y2  = factor(y2);
 Expan_y2   = expand(y2);
 Colect_y2  = collect(y2);
 simpli_y2  = simplify(y2);
-

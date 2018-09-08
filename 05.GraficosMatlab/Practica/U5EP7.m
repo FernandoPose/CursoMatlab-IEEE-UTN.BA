@@ -1,43 +1,43 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                                         %
-% Unidad 5. Introducci�n a la programaci�n con MatLAB                     %
+% Unidad 5. Introduccion a la programacion con MatLAB                     %
 %                                                                         %
 % Ejercicio#7                                                             %
 %                                                                         %
-% IEEE Secci�n Argentina                                                  %
-%                                                                         %
+% IEEE Seccion Argentina - Rama Estudiantil UTN.BA                        %
+% Realizada en 2018                                                       %
 %                                                                         %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 clear
 clc
 
-%% Item 1 - Creaci�n de ventana
+%% Item 1 - Creacion de ventana
 
 figure(1);
 subplot(2,1,1);
 
-%% Item 2 - Gr�fico de ventana superior
+%% Item 2 - Grafico de ventana superior
 
 x = -1.5:0.1:1.5;
 y_1 = tan(x);
 plot(x,y_1);
 
-%% Item 3 - T�tulo y etiqueta
+%% Item 3 - Titulo y etiqueta
 
-title('Funci�n y = tan(x)');
+title('Funcion y = tan(x)');
 xlabel('x');
 ylabel('tan(x)');
 
-%% Item 4 - Gr�fico de ventana inferior
+%% Item 4 - Grafico de ventana inferior
 
 subplot(2,1,2);
 y_2 = sinh(x);
 plot(x,y_2);
 
-%% Item 5 - T�tulo y etiqueta
+%% Item 5 - Titulo y etiqueta
 
-title('Funci�n y = senh(x)');
+title('Funcion y = senh(x)');
 xlabel('x');
 ylabel('senh(x)');
 
@@ -50,7 +50,7 @@ x = -1.5:0.1:1.5;
 y_1 = tan(x);
 plot(x,y_1);
 
-title('Funci�n y = tan(x)');
+title('Funcion y = tan(x)');
 xlabel('x');
 ylabel('tan(x)');
 
@@ -58,6 +58,6 @@ subplot(1,2,2);
 y_2 = sinh(x);
 plot(x,y_2);
 
-title('Funci�n y = senh(x)');
+title('Funcion y = senh(x)');
 xlabel('x');
 ylabel('senh(x)');

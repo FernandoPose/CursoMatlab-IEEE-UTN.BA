@@ -1,18 +1,18 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                                         %
-% Ejercicio Integrador 1. M�ximos y M�nimos de una se�al                  %
+% Ejercicio Integrador 1. Maximos y Minimos de una senal                  %
 %                                                                         %
 % Ejercicio Integrador#1                                                  %
 %                                                                         %
-% IEEE Secci�n Argentina                                                  %
-%                                                                         %
+% IEEE Seccion Argentina - Rama Estudiantil UTN.BA                        %
+% Realizada en 2018                                                       %
 %                                                                         %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%% Enunciado %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                                         %
-%   Graficar la se�al contenida en ecg.mat, luego obtenga y grafique los  %
-%   m�ximos y m�nimos de la se�al en un mismo gr�fico junto a la se�al    %
+%   Graficar la senal contenida en ecg.mat, luego obtenga y grafique los  %
+%   maximos y minimos de la senal en un mismo grafico junto a la senal    %
 %   cargada.                                                              %
 %                                                                         %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -23,13 +23,13 @@ clc; clear all; close all;          % Limpio el Workspace, el Command Window.
 
 
 %% Cargo el Workspace guardado
-load('ecg.mat');                    % Cargo la se�al a calcular m�ximos y m�nimos
+load('ecg.mat');                    % Cargo la senal a calcular maximos y minimos
 
 
 
 %% Defino variables del test
 %Numero de muestras
-N =  length(signal);                % N�mero de muestras (valores que tiene la se�al)
+N =  length(signal);                % Numero de muestras (valores que tiene la senal)
 fs = 250;                           % Frecuencia de muestreo (tiempo de toma de puntos)
 
 
@@ -39,14 +39,14 @@ t = 0:1/fs:(N-1)*1/fs;              % Eje temporal (Eje x)
 
 
 
-%% Item A (Grafico de la se�al contenida en el Workspace)
+%% Item A (Grafico de la senal contenida en el Workspace)
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % AYUDA: Graficar para: t = 0 a (N-1)*1/fs                                %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %--------------------------------------------------------------------------
-% Gr�fico de la se�al: amp = ecg(t):
+% Grafico de la se�al: amp = ecg(t):
 plot(t(1:length(signal)),signal(1:length(signal))); hold on;
 xlabel('Time [sec]'); xlim([0 (N-1)*1/fs]); ylabel('Amplitude [V]');
 %--------------------------------------------------------------------------
@@ -55,16 +55,16 @@ xlabel('Time [sec]'); xlim([0 (N-1)*1/fs]); ylabel('Amplitude [V]');
 
 %% Procesamiento
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% AYUDA: Ver funci�n: findpeaks()  Utilizar m�nima distancia              %
+% AYUDA: Ver funcion: findpeaks()  Utilizar minima distancia              %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %--------------------------------------------------------------------------
-% Obtener los m�ximos de la se�al:
+% Obtener los maximos de la senal:
 [val_MAX,ind_MAX]=findpeaks(signal,'minpeakdistance',100);
 %--------------------------------------------------------------------------
 
 %--------------------------------------------------------------------------
-% Obtener los m�nimos de la se�al:
+% Obtener los minimos de la senal:
 signal_invertida = -signal;
 [val_MIN,ind_MIN]=findpeaks(signal_invertida,'minpeakdistance',100);
 %--------------------------------------------------------------------------
@@ -74,11 +74,11 @@ signal_invertida = -signal;
 %% Resultados
 
 %--------------------------------------------------------------------------
-% Gr�fico de puntos m�ximos:
+% Grafico de puntos maximos:
 Maximos = plot(t(ind_MAX),val_MAX,'rs','MarkerFaceColor','g');
 %--------------------------------------------------------------------------
 
 %--------------------------------------------------------------------------
-% Gr�fico de puntos m�nimos:
+% Grafico de puntos minimos:
 Minimos = plot(t(ind_MIN),-val_MIN,'rs','MarkerFaceColor','b');
 %--------------------------------------------------------------------------

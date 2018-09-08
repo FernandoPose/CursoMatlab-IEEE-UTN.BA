@@ -1,15 +1,15 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                                         %
-% Unidad 6. Introducci�n a la programaci�n con MatLAB                     %
+% Unidad 6. Introduccion a la programacion con MatLAB                     %
 %                                                                         %
 % Ejercicio#9                                                             %
 %                                                                         %
-% IEEE Secci�n Argentina                                                  %
-%                                                                         %
+% IEEE Seccion Argentina - Rama Estudiantil UTN.BA                        %
+% Realizada en 2018                                                       %
 %                                                                         %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%% Funci�n de conversi�n minutos a segundos
+%% Funci�n de conversion minutos a segundos
 
 function vecRes = U6EP9B(v1,v2)
 

@@ -1,11 +1,11 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                                         %
-% Unidad 9. Introducci�n a la programaci�n con MatLAB                     %
+% Unidad 9. Introduccion a la programacion con MatLAB                     %
 %                                                                         %
 % Ejercicio#12 - Item A                                                   %
 %                                                                         %
-% IEEE Secci�n Argentina                                                  %
-%                                                                         %
+% IEEE Seccion Argentina - Rama Estudiantil UTN.BA                        %
+% Realizada en 2018                                                       %
 %                                                                         %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -21,11 +21,11 @@ switch year
     case 'segundo'
         dia = 'Martes';
     case 'tercero'
-        dia = 'Mi�rcoles';
+        dia = 'Miercoles';
     case 'cuarto'
         dia = 'Jueves';
     otherwise
-        dia = 'D�a no cargado';
+        dia = 'Dia no cargado';
 end
 
-disp(['El final es el d�a: ' dia])
+disp(['El final es el dia: ' dia])

@@ -1,18 +1,18 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                                         %
-% Unidad 4. Introducci�n a la programaci�n con MatLAB                     %
+% Unidad 4. Introduccion a la programacion con MatLAB                     %
 %                                                                         %
 % Ejercicio#5                                                             %
 %                                                                         %
-% IEEE Secci�n Argentina                                                  %
-%                                                                         %
+% IEEE Seccion Argentina - Rama Estudiantil UTN.BA                        %
+% Realizada en 2018                                                       %
 %                                                                         %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 clear
 clc
 
-%% Item 1 - Definici�n de A
+%% Item 1 - Definicion de A
 
 a = [2.3 5.8 9];
 
@@ -20,7 +20,7 @@ a = [2.3 5.8 9];
 
 VecRes = a + 3;
 
-%% Item 3 - Definici�n de B
+%% Item 3 - Definicion de B
 
 b = [5.2 3.14 2];
 
@@ -28,7 +28,7 @@ b = [5.2 3.14 2];
 
 Sum_AB = a + b;
 
-%% Item 5 - Multiplicaci�n elemento/elemento
+%% Item 5 - Multiplicacion elemento/elemento
 
 Pro_AB = a.*b;
 
@@ -36,11 +36,11 @@ Pro_AB = a.*b;
 
 Cuad_A = a.^2;
 
-%% Item 7 - Definici�n de C
+%% Item 7 - Definicion de C
 
 c = 0:10;
 
-%% Item 8 - Definici�n de D
+%% Item 8 - Definicion de D
 
 d = 0:2:10;
 

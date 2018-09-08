@@ -1,14 +1,11 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                                         %
-% Unidad 11. Introducción a la programación con MatLAB                    %
+% Unidad 11. Introduccion a la programacion con MatLAB                    %
 %                                                                         %
 % Ejercicio#19                                                            %
 %                                                                         %
-% IEEE Sección Argentina UTN.BA                                           %
-%                                                                         %
-% Facultad Regional Buenos Aires                                          %
-% Universidad Tecnológica Nacional                                        %
-% Período Lectivo 2018                                                    %
+% IEEE Seccion Argentina - Rama Estudiantil UTN.BA                        %
+% Realizada en 2018                                                       %
 %                                                                         %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

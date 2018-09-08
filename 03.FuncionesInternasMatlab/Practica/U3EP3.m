@@ -1,10 +1,10 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                                         %
-% Unidad 3. Introducci�n a la programaci�n con MatLAB                     %
+% Unidad 3. Introduccion a la programacion con MatLAB                     %
 %                                                                         %
 % Ejercicio#3                                                             %
 %                                                                         %
-% IEEE Secci�n Argentina                                                  %
+% IEEE Seccion Argentina                                                  %
 %                                                                         %
 %                                                                         %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -12,19 +12,19 @@
 clear
 clc
 
-% Declaraci�n del vector
+% Declaracion del vector
 
 x = [4,90,85,75 ; 2,55,65,75 ; 3,78,82,79 ; 1,84,92,93];
 
-%% Item 1 - C�lculo de m�ximo (columna)
+%% Item 1 - Calculo de maximo (columna)
 
 ValC_Max = max(x);
 
-%% Item 2 - C�lculo de m�ximo y fila (columna)
+%% Item 2 - Calculo de maximo y fila (columna)
 
 [maxC nFilaC] = max(x);
 
-%% Item 3 - C�lculo de m�ximo (fila)
+%% Item 3 - Calculo de maximo (fila)
 
 ValF_Max = max(x');
 
@@ -32,6 +32,6 @@ ValF_Max = max(x');
 
 [maxF nFilaF] = max(x');
 
-%% Item 5 - C�lculo del m�ximo de la tabla
+%% Item 5 - Calculo del maximo de la tabla
 
 Maximo = max(max(x));

@@ -1,18 +1,18 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                                         %
-% Ejercicio Integrador 3. Sucesi�n de Fibonacci                           %
+% Ejercicio Integrador 3. Sucesion de Fibonacci                           %
 %                                                                         %
 % Ejercicio Integrador#3                                                  %
 %                                                                         %
-% IEEE Secci�n Argentina                                                  %
-%                                                                         %
+% IEEE Seccion Argentina - Rama Estudiantil UTN.BA                        %
+% Realizada en 2018                                                       %
 %                                                                         %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%% Enunciado %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                                         %
 %   Preparar un programa que calcule y almacene en una variable los 50    %
-%   primeros t�rminos de la sucesi�n                                      %
+%   primeros terminos de la sucesion                                      %
 %                                                                         %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -26,18 +26,18 @@ clc; clear all; close all;          % Limpio el Workspace, el Command Window.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %--------------------------------------------------------------------------
-% Ac� va c�digo
+% Aca va codigo
 %--------------------------------------------------------------------------
 
 %% Procesamiento
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% AYUDA: Utilice ciclo de repetici�n for                                  %
+% AYUDA: Utilice ciclo de repeticion for                                  %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %--------------------------------------------------------------------------
-% Ac� va c�digo
+% Aca va codigo
 %--------------------------------------------------------------------------
 
 %% Informe de resultados
-disp(['Sucesi�n: ' num2str(suc)]);
+disp(['Sucesion: ' num2str(suc)]);

@@ -1,4 +1,0 @@
-if enunciadoDeComparacion
-    %instrucciones
-end
-

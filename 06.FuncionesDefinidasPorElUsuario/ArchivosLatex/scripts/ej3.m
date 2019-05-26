@@ -1,1 +1,0 @@
-[output_1 output_2] = my_function(variable_1, variable_2)

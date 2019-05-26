@@ -1,1 +1,0 @@
-variable = load('texto.txt') ;

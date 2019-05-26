@@ -1,1 +1,0 @@
-MatrizIdentidad = eye(3)

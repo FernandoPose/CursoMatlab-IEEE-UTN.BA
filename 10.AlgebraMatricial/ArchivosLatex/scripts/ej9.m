@@ -1,1 +1,0 @@
-MatrizUnos = ones(2)
